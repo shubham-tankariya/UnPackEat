@@ -21,13 +21,13 @@ MarkupSafe==3.0.3
 mdurl==0.1.2
 pydantic==2.12.5
 pydantic-extra-types==2.11.0
-pydantic-settings==2.13.1
+pydantic-settings==2.13.0
 pydantic_core==2.41.5
 Pygments==2.19.2
 python-dotenv==1.2.1
 python-multipart==0.0.22
 PyYAML==6.0.3
-rich==14.3.3
+rich==14.3.2
 rich-toolkit==0.19.4
 rignore==0.7.6
 sentry-sdk==2.53.0

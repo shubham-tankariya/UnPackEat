@@ -3,6 +3,7 @@ from fastapi import HTTPException
 
 OPENFOODFACTS_URL = "https://world.openfoodfacts.net/api/v2/product/"
 
+
 async def fetch_product_from_api(barcode: str):
     url = f"{OPENFOODFACTS_URL}{barcode}"
 
@@ -17,7 +18,7 @@ async def fetch_product_from_api(barcode: str):
 
     if res.status_code != 200:
         raise HTTPException(status_code=502, detail="OpenFoodFacts API error")
-    
+
     try:
         data = res.json()
     except ValueError:
