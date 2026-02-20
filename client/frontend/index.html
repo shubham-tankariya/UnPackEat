@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Analyser</title>
+
+    <link rel="stylesheet" href="index_style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top mt-3">
+            <div class="container">
+                <!-- PILL SHELL (FIXED SHAPE) -->
+                <div class="w-100 px-4 py-2 border rounded-pill shadow-sm" style="background-color: #626f47">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <!-- Brand -->
+                        <a class="navbar-brand fw-bold text-warning text-nowrap m-0" href="#">
+                            UnPackEat
+                        </a>
+
+                        <!-- Desktop menu -->
+                        <ul class="navbar-nav d-none d-lg-flex gap-3 mb-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="awareness.html">Awareness</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="FAQ.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="Contribution.html">Contribution</a>
+                            </li>
+                        </ul>
+
+                        <!-- Right side -->
+                        <div class="d-flex align-items-center gap-2">
+                            <input class="form-control rounded-pill d-none d-lg-block" type="search"
+                                placeholder="Search" />
+                            <button class="btn btn-outline-warning rounded-pill d-none d-lg-block">
+                                Search
+                            </button>
+
+                            <a href="user.html" class="d-flex align-items-center text-white text-decoration-none">
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                    class="rounded-circle me-2" />
+                                <strong>User</strong>
+                            </a>
+
+                            <!-- Hamburger -->
+                            <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mobileMenu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE MENU -->
+                <div class="collapse d-lg-none mt-3 mx-auto" id="mobileMenu" style="max-width: 100%">
+                    <div class="card card-body shadow-sm rounded-4 text-center mx-auto"
+                        style="max-width: 95%; background-color: #626f47">
+                        <ul class="navbar-nav gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="awareness.html">Awareness</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="FAQ.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="Contribution.html">Contribution</a>
+                            </li>
+                        </ul>
+
+                        <hr class="border-light" />
+
+                        <input class="form-control rounded-pill mb-2" type="search" placeholder="Search" />
+                        <button class="btn btn-outline-light rounded-pill w-100">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <img src="images/img-6.jpg" class="d-block w-100 img-fluid" alt="Food Analyzer"
+                            style="object-fit: cover; height: 87vh" />
+
+                        <!-- Overlay content -->
+                        <div class="carousel-caption top-0 start-0 w-100 h-100 d-flex align-items-center">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-md-10 col-lg-8 text-center text-md-center">
+
+                                        <h1 class="display-5 display-md-4 fw-bold text-white mb-3" data-aos="fade-down"
+                                            data-aos-duration="1500">
+                                            Analyze Food Instantly
+                                        </h1>
+
+                                        <p class="lead text-white mb-4" data-aos="fade-up" data-aos-duration="1500"
+                                            data-aos-delay="200">
+                                            Scan, analyze, and make healthier choices with Food Analyser.
+                                        </p>
+
+                                        <a href="#how_it_work" class="btn btn-success btn-lg rounded-pill px-4 py-2"
+                                            data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                                            Get Started
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS SECTION -->
+        <section class="py-5 section2-color">
+            <!-- set section background color -->
+            <div class="container px-0">
+                <div class="px-4 py-4">
+                    <!-- add padding so background shows in margins -->
+
+                    <!-- Section Title -->
+                    <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                        <h2 class="fw-bold">
+                            How Food Analyser Works -
+                            <span class="text-success">3 easy steps</span>
+                        </h2>
+                        <p class="text-muted">
+                            Analyse your food quickly and make healthier choices in just
+                            three simple steps.
+                        </p>
+                    </div>
+
+                    <!-- Steps Block -->
+                    <ul class="list-unstyled">
+                        <!-- Step 1 Card -->
+                        <li class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="card rounded-4 shadow-sm overflow-hidden">
+                                <div class="row g-0 align-items-center">
+                                    <div class="col-lg-5 text-center steps-color" data-aos="fade-right"
+                                        data-aos-duration="1500">
+                                        <img src="images/mobile-removebg-preview.png" class="img-fluid rounded-start-4"
+                                            alt="Step 1" />
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="card-body" data-aos="fade-left" data-aos-duration="1500">
+                                            <h2 class="display-5 fw-bold text-success mb-3">01</h2>
+                                            <h3 class="fw-bold">Upload or Scan Food</h3>
+                                            <p class="text-muted">
+                                                Upload a clear image of your food or scan the
+                                                nutrition label to begin analysing ingredients,
+                                                nutritional values, and overall health impact. Our
+                                                smart food analyser quickly processes the information
+                                                and provides easy-to-understand insights to help you
+                                                make healthier, more informed dietary choices.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Step 2 Card -->
+                        <li class="mb-5" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                            <div class="card rounded-4 shadow-sm overflow-hidden" style="background-color: #ffffff">
+                                <div class="row g-0 align-items-center flex-lg-row-reverse">
+                                    <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-duration="1500">
+                                        <img src="images/Ingredient.png" class="img-fluid rounded-end-4" alt="Step 2" />
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="card-body" data-aos="fade-right" data-aos-duration="1500">
+                                            <h2 class="display-5 fw-bold text-success mb-3">02</h2>
+                                            <h3 class="fw-bold">Ingredient Analysis</h3>
+                                            <p class="text-muted">
+                                                Our system carefully examines each ingredient to
+                                                identify potential allergens, harmful additives,
+                                                artificial preservatives, and other concerning
+                                                components. It then provides a clear,
+                                                easy-to-understand health evaluation of the product,
+                                                helping you quickly assess whether it aligns with your
+                                                dietary needs and wellness goals.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Step 3 Card -->
+                        <li class="mb-5" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                            <div class="card rounded-4 shadow-sm overflow-hidden" style="background-color: #ffffff">
+                                <div class="row g-0 align-items-center">
+                                    <div class="col-lg-5 text-center" data-aos="fade-right" data-aos-duration="1500">
+                                        <img src="images/product.png" class="img-fluid rounded-start-4" alt="Step 3" />
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="card-body" data-aos="fade-left" data-aos-duration="1500">
+                                            <h2 class="display-5 fw-bold text-success mb-3">03</h2>
+                                            <h3 class="fw-bold">Get Suggestions & Track History</h3>
+                                            <p class="text-muted">
+                                                Receive personalized tips, healthier alternatives, and
+                                                smart recommendations based on your food analysis
+                                                results. Easily track your previous scans and analyses
+                                                to monitor patterns, improve your eating habits, and
+                                                stay consistent with your long-term health and
+                                                nutrition goals.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 section3-color">
+            <div class="container px-0">
+                <!-- remove horizontal padding -->
+                <div class="px-4">
+                    <!-- optional inner padding for content -->
+
+                    <!-- Section Title -->
+                    <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                        <h2 class="fw-bold">
+                            App Features -
+                            <span class="text-success">Everything You Need in One Place</span>
+                        </h2>
+                        <p class="text-muted">
+                            Explore powerful tools designed to help you analyse food
+                            instantly, understand ingredients clearly, and make healthier
+                            decisions with confidence.
+                        </p>
+                    </div>
+
+                    <!-- Features Grid -->
+                    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                        <!-- Feature 1 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm feature-card d-flex flex-column rounded-5"
+                                data-aos="fade-right" data-aos-duration="1500">
+                                <div class="card-body text-center flex-grow-1">
+                                    <div
+                                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-2 mb-3 rounded-circle p-4">
+                                        <img src="images/s1.png" height="40px" width="40px" />
+                                    </div>
+                                    <h3 class="fs-4 fw-bold mb-2">
+                                        Ingredient Analysis & Allergen Detection
+                                    </h3>
+                                    <p class="text-muted">
+                                        Identify allergens, additives, preservatives, and harmful
+                                        ingredients. Display risk levels or health ratings.
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 text-center mt-auto">
+                                    <a href="#" class="icon-link text-decoration-none text-success fw-bold">Call to
+                                        action
+                                        <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                                            <use xlink:href="#chevron-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm feature-card d-flex flex-column rounded-5"
+                                data-aos="fade-up" data-aos-duration="1500" data-aos-delay="150">
+                                <div class="card-body text-center flex-grow-1">
+                                    <div
+                                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-2 mb-3 rounded-circle p-4">
+                                        <img src="images/s2.png" height="40px" width="40px" />
+                                    </div>
+                                    <h3 class="fs-4 fw-bold mb-2">
+                                        Personalized Recommendations
+                                    </h3>
+                                    <p class="text-muted">
+                                        Suggest healthier alternatives for scanned products.
+                                        Recommend recipes or foods based on diet preferences.
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 text-center mt-auto">
+                                    <a href="#" class="icon-link text-decoration-none text-success fw-bold">Call to
+                                        action
+                                        <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                                            <use xlink:href="#chevron-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm feature-card d-flex flex-column rounded-5"
+                                data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">
+                                <div class="card-body text-center flex-grow-1">
+                                    <div
+                                        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-2 mb-3 rounded-circle p-4">
+                                        <img src="images/s3.png" height="40px" width="40px" />
+                                    </div>
+                                    <h3 class="fs-4 fw-bold mb-2">Nutrition Score</h3>
+                                    <p class="text-muted">
+                                        Provide an easy-to-understand health score for each
+                                        product.
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 text-center mt-auto">
+                                    <a href="#" class="icon-link text-decoration-none text-success fw-bold">Call to
+                                        action
+                                        <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                                            <use xlink:href="#chevron-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-color py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-4">
+                <!-- Brand + Copyright -->
+                <!-- Brand + Copyright in one column -->
+                <div class="col mb-3 text-center text-md-start">
+                    <div class="d-flex flex-column align-items-center align-items-md-start">
+                        <span class="fw-bold text-white mb-1">Food Analyser</span>
+                        <span class="text-white">© 2025</span>
+                    </div>
+                </div>
+
+                <div class="col mb-3"></div>
+                <!-- Empty column for spacing -->
+
+                <!-- Section 1 -->
+                <div class="col mb-3">
+                    <h5 class="text-white">Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Features</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="col mb-3">
+                    <h5 class="text-white">Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Features</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="col mb-3">
+                    <h5 class="text-white">Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Features</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // Animates only once when scrolling
+            duration: 1500, // Default animation duration
+        });
+    </script>
+</body>
+
+</html>
