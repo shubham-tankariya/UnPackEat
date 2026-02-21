@@ -58,20 +58,13 @@ _POSITIVE_LABELS = {
     "en:no-preservatives", "en:whole-grain",
 }
 
-
 def analyze(normalized):
     n   = normalized["nutrients"]
     ing = normalized["ingredients"]
     m   = normalized["metadata"]
     s   = normalized["serving"]
 
-    # ------------------------------------------------------------------ #
-    #  NUTRITION DATA PER WARNING                                         #
-    #  If OFF says values are per-serving (not per 100g), our analysis   #
-    #  will be inaccurate — flag it prominently.                          #
-    # ------------------------------------------------------------------ #
     nutrition_data_per = s.get("nutrition_data_per", "100g")
-
 
     score    = 100
     likes    = []
@@ -84,13 +77,17 @@ def analyze(normalized):
     fiber       = _safe(n.get("fiber"))
     protein     = _safe(n.get("protein"))
     energy_kcal = _safe(n.get("energy_kcal"))
+    cholesterol = _safe(n.get("cholesterol"))
+    trans_fat   = _safe(n.get("trans_fat"))
+    carbs       = _safe(n.get("carbohydrates"))
 
-    # ------------------------------------------------------------------ #
-    #  SALT                                                               #
-    # ------------------------------------------------------------------ #
-    # Guard against erroneous OFF data (salt > 100 g/100 g is impossible)
-    if salt is not None and salt > 100:
-        salt = None
+    # ── salt (cap nonsense values for non-condiments) ────────────────
+    if salt is not None and salt > 10:
+        categories = normalized.get("product", {}).get("categories", [])
+        is_condiment = any("salt" in c or "condiment" in c or "spice" in c
+                          for c in categories)
+        if not is_condiment:
+            salt = None  # likely data error
 
     if salt is None:
         score -= 5
@@ -104,9 +101,7 @@ def analyze(normalized):
     else:
         likes.append("Low salt")
 
-    # ------------------------------------------------------------------ #
-    #  SATURATED FAT                                                      #
-    # ------------------------------------------------------------------ #
+    # ── saturated fat ────────────────────────────────────────────────
     if sat_fat is None:
         score -= 5
         concerns.append("Saturated fat not reported")
@@ -119,9 +114,7 @@ def analyze(normalized):
     else:
         likes.append("Low saturated fat")
 
-    # ------------------------------------------------------------------ #
-    #  TOTAL FAT                                                          #
-    # ------------------------------------------------------------------ #
+    # ── total fat ────────────────────────────────────────────────────
     if total_fat is not None:
         if total_fat > 17.5:
             score -= 10
@@ -129,27 +122,33 @@ def analyze(normalized):
         elif total_fat > 10:
             score -= 4
 
-    # ------------------------------------------------------------------ #
-    #  SUGARS                                                             #
-    # ------------------------------------------------------------------ #
+    # ── saturated-to-total fat ratio (extra penalty) ─────────────────
+    if sat_fat is not None and total_fat is not None and total_fat > 0:
+        sat_ratio = sat_fat / total_fat
+        if sat_ratio > 0.5:
+            score -= 3
+            concerns.append("High saturated-to-total fat ratio")
+        elif sat_ratio < 0.3 and total_fat > 5:
+            score += 2
+            likes.append("Healthy fat profile")
+
+    # ── sugars (tightened to WHO guidance) ────────────────────────────
     if sugars is None:
         score -= 3
         concerns.append("Sugar content not reported")
-    elif sugars > 22.5:
+    elif sugars > 15:
         score -= 20
         concerns.append("Very high sugar")
-    elif sugars > 12.5:
+    elif sugars > 10:
         score -= 10
         concerns.append("High sugar")
-    elif sugars > 8:
+    elif sugars > 5:
         score -= 4
         concerns.append("Moderate sugar")
     else:
         likes.append("Low sugar")
 
-    # ------------------------------------------------------------------ #
-    #  FIBER                                                              #
-    # ------------------------------------------------------------------ #
+    # ── fiber ────────────────────────────────────────────────────────
     if fiber is not None:
         if fiber >= 5:
             score += 8
@@ -160,16 +159,16 @@ def analyze(normalized):
         elif fiber < 1:
             score -= 3
 
-    # ------------------------------------------------------------------ #
-    #  PROTEIN                                                            #
-    # ------------------------------------------------------------------ #
-    if protein is not None and protein >= 10:
-        score += 5
-        likes.append("High protein")
+    # ── protein (scaled bonus) ───────────────────────────────────────
+    if protein is not None:
+        if protein >= 15:
+            score += 7
+            likes.append("Excellent protein content")
+        elif protein >= 10:
+            score += 5
+            likes.append("High protein")
 
-    # ------------------------------------------------------------------ #
-    #  ENERGY DENSITY                                                     #
-    # ------------------------------------------------------------------ #
+    # ── energy ───────────────────────────────────────────────────────
     if energy_kcal is not None:
         if energy_kcal > 450:
             score -= 10
@@ -177,10 +176,26 @@ def analyze(normalized):
         elif energy_kcal > 300:
             score -= 5
             concerns.append("High calorie density")
+        elif energy_kcal < 100:
+            score += 3
+            likes.append("Low calorie")
 
-    # ------------------------------------------------------------------ #
-    #  NOVA GROUP (processing level)                                      #
-    # ------------------------------------------------------------------ #
+    # ── cholesterol ──────────────────────────────────────────────────
+    if cholesterol is not None and cholesterol > 0.1:  # > 100mg per 100g
+        score -= 5
+        concerns.append("High cholesterol")
+
+    # ── trans fat ────────────────────────────────────────────────────
+    if trans_fat is not None and trans_fat > 0:
+        score -= 10
+        concerns.append("Contains trans fat")
+
+    # ── carbohydrates (flag very high) ───────────────────────────────
+    if carbs is not None and carbs > 70:
+        score -= 3
+        concerns.append("Very high carbohydrate content")
+
+    # ── NOVA processing level ────────────────────────────────────────
     nova = m.get("nova_group")
     if nova == 4:
         score -= 15
@@ -191,16 +206,17 @@ def analyze(normalized):
     elif nova in (1, 2):
         likes.append("Minimally processed")
 
-    # ------------------------------------------------------------------ #
-    #  PALM OIL                                                           #
-    # ------------------------------------------------------------------ #
+    # ── palm oil ─────────────────────────────────────────────────────
     if ing.get("contains_palm_oil"):
         score -= 5
         concerns.append("Contains palm oil")
 
-    # ------------------------------------------------------------------ #
-    #  ADDITIVES  (loaded from data/additives.json)                      #
-    # ------------------------------------------------------------------ #
+    # ── ingredient complexity ────────────────────────────────────────
+    ingredient_count = ing.get("total_count", 0)
+    if ingredient_count > 20:
+        score -= 3
+        concerns.append(f"Complex formulation ({ingredient_count} ingredients)")
+ 
     additives_full = []
     additive_score_deduction = 0
     high_risk_count = 0
@@ -232,9 +248,6 @@ def analyze(normalized):
     if high_risk_count:
         concerns.append(f"{high_risk_count} high-risk additive(s) detected")
 
-    # ------------------------------------------------------------------ #
-    #  POSITIVE LABEL BONUSES                                            #
-    # ------------------------------------------------------------------ #
     product_labels = set(m.get("labels") or [])
     matched_labels = product_labels & _POSITIVE_LABELS
     if matched_labels:
@@ -242,11 +255,6 @@ def analyze(normalized):
         label_names = [l.replace("en:", "").replace("-", " ").title() for l in sorted(matched_labels)]
         likes.append(f"Certified: {', '.join(label_names)}")
 
-    # ------------------------------------------------------------------ #
-    #  DATA COMPLETENESS                                                  #
-    #  Prefer OFF's own completeness score; fall back to key-nutrient    #
-    #  count if not available.                                            #
-    # ------------------------------------------------------------------ #
     off_completeness = _safe(m.get("off_completeness"))
     if nutrition_data_per != "100g":
         score -= 8
@@ -265,14 +273,8 @@ def analyze(normalized):
             score -= 5
             concerns.append("Very limited nutrition data available")
 
-    # ------------------------------------------------------------------ #
-    #  CLAMP                                                              #
-    # ------------------------------------------------------------------ #
     score = max(0, min(100, score))
 
-    # ------------------------------------------------------------------ #
-    #  RDA TABLE                                                          #
-    # ------------------------------------------------------------------ #
     RDA = {
         "salt":          5,
         "saturated_fat": 20,
@@ -297,9 +299,6 @@ def analyze(normalized):
                 "rating":      rating_color(key, v),
             })
 
-    # ------------------------------------------------------------------ #
-    #  PER-SERVING NUTRIENTS                                              #
-    # ------------------------------------------------------------------ #
     sg = s.get("serving_size_g")
     if sg:
         per_serv = {
@@ -310,9 +309,6 @@ def analyze(normalized):
     else:
         per_serv = None
 
-    # ------------------------------------------------------------------ #
-    #  RADAR (0–1 scale)                                                  #
-    # ------------------------------------------------------------------ #
     radar = {
         "salt":          min(1.0, (_safe(n.get("salt"))          or 0) / 3),
         "saturated_fat": min(1.0, (_safe(n.get("saturated_fat")) or 0) / 10),
@@ -322,14 +318,13 @@ def analyze(normalized):
         "protein":       min(1.0, (_safe(n.get("protein"))       or 0) / 25),
     }
 
-    # ------------------------------------------------------------------ #
-    #  VERDICT                                                            #
-    # ------------------------------------------------------------------ #
     if score >= 75:
         verdict = "Healthy choice"
-    elif score >= 50:
+    elif score >= 60:
+        verdict = "Decent choice"
+    elif score >= 40:
         verdict = "Moderate consumption recommended"
-    elif score >= 25:
+    elif score >= 20:
         verdict = "Best enjoyed occasionally"
     else:
         verdict = "Limit consumption"

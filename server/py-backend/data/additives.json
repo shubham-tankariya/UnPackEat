@@ -1,0 +1,446 @@
+{
+    "E100": {
+        "name": "Curcumin",
+        "category": "Colour",
+        "risk": "low",
+        "explanation": "A natural bright-yellow pigment extracted from turmeric root (Curcuma longa). It has been used for centuries in cooking and traditional medicine. Curcumin is well-regarded for its potent anti-inflammatory and antioxidant properties. Studies suggest it may support joint health, improve digestion, and help protect against oxidative stress. It is considered very safe at levels used in food colouring and is approved worldwide."
+    },
+    "E102": {
+        "name": "Tartrazine",
+        "category": "Colour",
+        "risk": "moderate",
+        "explanation": "A synthetic lemon-yellow azo dye widely used in beverages, confectionery, and snack foods. Tartrazine has been linked to hyperactivity in children, particularly when combined with sodium benzoate (E211). It is banned or restricted in several countries including Norway and Austria. In the EU, products containing Tartrazine must carry a warning label stating it 'may have an adverse effect on activity and attention in children.' People with aspirin sensitivity or asthma may experience allergic-type reactions."
+    },
+    "E110": {
+        "name": "Sunset Yellow FCF",
+        "category": "Colour",
+        "risk": "moderate",
+        "explanation": "A synthetic orange-yellow azo dye commonly found in soft drinks, sauces, sweets, and instant noodle seasonings. Like other azo dyes, it has been associated with hyperactivity in children in the Southampton Study. The EU requires a mandatory warning label on products containing E110. Some individuals with aspirin intolerance or asthma may experience allergic reactions. It is banned in Norway and Finland but permitted with restrictions in most other countries."
+    },
+    "E120": {
+        "name": "Cochineal / Carmine",
+        "category": "Colour",
+        "risk": "moderate",
+        "explanation": "A natural red dye extracted from the dried bodies of cochineal insects (Dactylopius coccus). It is widely used in yoghurts, drinks, confectionery, and cosmetics. While it is a natural colourant, it is not suitable for vegans, vegetarians, or those following certain religious dietary laws. Rare but documented cases of allergic reactions, including anaphylaxis, have been reported. The FDA requires it to be explicitly listed on ingredient labels."
+    },
+    "E129": {
+        "name": "Allura Red AC",
+        "category": "Colour",
+        "risk": "moderate",
+        "explanation": "A synthetic red azo dye used extensively in sweets, soft drinks, sauces, and processed foods. It is one of the six Southampton dyes linked to hyperactivity in children, and products containing it must carry a warning in the EU. Some animal studies suggest potential genotoxicity at very high doses, though regulatory bodies like the FDA and EFSA consider it safe within the established Acceptable Daily Intake (ADI). It has been banned in Denmark, Belgium, France, and Switzerland."
+    },
+    "E150": {
+        "name": "Caramel Colour (generic)",
+        "category": "Colour",
+        "risk": "low",
+        "explanation": "A broad category of caramel colourings produced by heating sugars. When listed generically as E150, the specific manufacturing process is not disclosed. Caramel colour is the most widely used food colouring in the world by weight, found in soft drinks, sauces, breads, and confectionery. The safety depends on the specific subclass (E150a–E150d); plain caramel (E150a) is considered very safe, while ammonia-sulphite caramel (E150d) may contain trace amounts of 4-MEI, a compound of concern."
+    },
+    "E150A": {
+        "name": "Plain Caramel",
+        "category": "Colour",
+        "risk": "low",
+        "explanation": "The simplest form of caramel colouring, produced by heating sugar alone without any chemical reactants. It is also called 'spirit caramel' or 'caustic caramel.' Plain caramel is considered the safest of all caramel colourings since no ammonium or sulphite compounds are used in its production. It is commonly used in whisky, brandy, bakery products, and confectionery. EFSA and the FDA both consider it safe at typical food-use levels."
+    },
+    "E150C": {
+        "name": "Ammonia Caramel",
+        "category": "Colour",
+        "risk": "moderate",
+        "explanation": "Caramel colouring produced by heating sugar in the presence of ammonium compounds. Used in beer, soy sauce, and certain confectionery products. During manufacture, a by-product called 2-acetyl-4-tetrahydroxybutylimidazole (THI) can form, which has been shown to suppress immune function in animal studies. While regulatory agencies consider it safe within recommended limits, some health advocates urge minimising exposure. It should not be confused with E150d (sulphite ammonia caramel), which carries a higher risk."
+    },
+    "E150D": {
+        "name": "Sulphite Ammonia Caramel",
+        "category": "Colour",
+        "risk": "high",
+        "explanation": "The most commonly used caramel colouring, produced by heating sugar with both ammonium and sulphite compounds. It is the dark brown colour found in colas, dark beers, soy sauce, and many processed foods. During production, it can form 4-methylimidazole (4-MEI), which has been classified as 'possibly carcinogenic to humans' by IARC. California's Proposition 65 requires a cancer warning on products exceeding 29 micrograms of 4-MEI per serving. The EU and FDA still consider it safe within recommended limits."
+    },
+    "E160": {
+        "name": "Carotenoids (generic)",
+        "category": "Colour",
+        "risk": "low",
+        "explanation": "A family of natural yellow, orange, and red pigments found in fruits, vegetables, and algae. When listed generically as E160, the specific carotenoid is unspecified. Carotenoids include beta-carotene (E160a), lutein (E161b), and lycopene (E160d), all of which are potent antioxidants with well-documented health benefits including eye health support and skin protection from UV damage. They are considered very safe at food-use levels and are often added as natural colourings and nutritional supplements."
+    },
+    "E160A": {
+        "name": "Beta-Carotene",
+        "category": "Colour",
+        "risk": "low",
+        "explanation": "A natural provitamin A colouring found in carrots, sweet potatoes, spinach, and other orange and dark-green vegetables. The body converts beta-carotene into vitamin A, which is essential for vision, immune function, and skin health. As a food additive, it provides a yellow-to-orange colour and acts as a beneficial antioxidant. It is considered very safe at food levels and is widely used in margarine, cheese, beverages, and supplements."
+    },
+    "E160C": {
+        "name": "Paprika Extract (Capsanthin/Capsorubin)",
+        "category": "Colour",
+        "risk": "low",
+        "explanation": "A natural red-orange colour extracted from paprika peppers (Capsicum annuum). The active colouring compounds are capsanthin and capsorubin, which are carotenoids with antioxidant properties. Paprika extract is commonly used in sausages, cheese, snacks, sauces, and salad dressings. It is considered very safe with no known adverse health effects at food-use levels. It is a preferred natural alternative to synthetic red dyes."
+    },
+    "E170": {
+        "name": "Calcium Carbonate",
+        "category": "Colour / Mineral Salt",
+        "risk": "low",
+        "explanation": "A naturally occurring mineral found in limestone, chalk, marble, and seashells. In food, it serves as a white colouring agent, anti-caking agent, and calcium supplement. It is widely used in bread, biscuits, supplements, and as a coating for confectionery. Calcium carbonate is also the active ingredient in many antacid medications. It is considered entirely safe and is actually nutritionally beneficial, providing bioavailable calcium. Approved globally with no known safety concerns."
+    },
+    "E170I": {
+        "name": "Calcium Carbonate (specific form)",
+        "category": "Colour / Mineral Salt",
+        "risk": "low",
+        "explanation": "The specific Roman-numeral variant of calcium carbonate refers to the pure, unmodified form of the mineral. It functions identically to E170 — providing white colouring and acting as an anti-caking agent and calcium source. Commonly used in confectionery coatings, baking, and nutritional supplements. Considered completely safe with no adverse health effects at food-use levels."
+    },
+    "E202": {
+        "name": "Potassium Sorbate",
+        "category": "Preservative",
+        "risk": "low",
+        "explanation": "The potassium salt of sorbic acid, widely used as a preservative to inhibit mould, yeast, and some bacteria in foods. Found in cheese, yoghurt, wine, baked goods, dried fruits, and personal care products. It is one of the most extensively studied preservatives and is regarded as safe by both EFSA and the FDA. At typical use levels, it does not accumulate in the body and is metabolised like a fatty acid. Very rarely, skin contact may cause mild irritation in sensitive individuals."
+    },
+    "E211": {
+        "name": "Sodium Benzoate",
+        "category": "Preservative",
+        "risk": "moderate",
+        "explanation": "A widely used preservative that prevents bacterial and fungal growth in acidic foods. Found in soft drinks, fruit juices, pickles, and condiments. The primary concern is that sodium benzoate can react with ascorbic acid (vitamin C) to form benzene, a known carcinogen, particularly in acidic beverages exposed to heat or light. The Southampton Study also linked it to hyperactivity in children when combined with certain azo dyes. EFSA re-evaluated it in 2016 and lowered the ADI."
+    },
+    "E220": {
+        "name": "Sulphur Dioxide",
+        "category": "Preservative",
+        "risk": "moderate",
+        "explanation": "A pungent gas used as a preservative and antioxidant in dried fruits, wine, fruit juices, and processed foods. It prevents enzymatic browning and inhibits bacterial growth. However, it can trigger severe asthmatic reactions in sensitive individuals (estimated 3-10% of asthmatics are affected). Long-term high intake may destroy thiamine (vitamin B1). EU regulations require foods containing more than 10 mg/kg of sulphites to display an allergen warning. It is one of the 14 major allergens recognised in the EU."
+    },
+    "E223": {
+        "name": "Sodium Metabisulphite",
+        "category": "Preservative",
+        "risk": "moderate",
+        "explanation": "A sulphite-based preservative and antioxidant used in dried fruits, fruit juices, wine, and processed seafood. It releases sulphur dioxide (SO₂) when dissolved, which prevents microbial growth and oxidative browning. Like other sulphites, it can trigger asthmatic episodes, breathing difficulties, and skin reactions in sensitive individuals. People with sulphite sensitivity should avoid it. Must be declared on labels when present above 10 mg/kg. Not recommended for use in foods rich in thiamine (vitamin B1) as it can destroy this essential nutrient."
+    },
+    "E250": {
+        "name": "Sodium Nitrite",
+        "category": "Preservative",
+        "risk": "high",
+        "explanation": "A curing salt used to preserve processed meats such as bacon, ham, sausages, and hot dogs. It prevents the growth of Clostridium botulinum (the bacterium that causes botulism) and gives cured meats their characteristic pink colour. However, during high-heat cooking or in acidic stomach conditions, sodium nitrite can react with amino acids to form nitrosamines, which are classified as probable carcinogens by IARC. EFSA and WHO have linked high consumption of processed meats containing nitrites to increased colorectal cancer risk."
+    },
+    "E251": {
+        "name": "Sodium Nitrate",
+        "category": "Preservative",
+        "risk": "high",
+        "explanation": "A precursor to sodium nitrite, used in curing and preserving meats. In the body, bacteria convert sodium nitrate into sodium nitrite, which then carries the same cancer-related risks—namely the potential to form carcinogenic nitrosamines. It is found in cured hams, salami, and some cheeses. The WHO classifies processed meat as a Group 1 carcinogen, with nitrates and nitrites being key contributors. High dietary exposure has been associated with increased risk of colorectal and stomach cancers."
+    },
+    "E290": {
+        "name": "Carbon Dioxide",
+        "category": "Propellant / Carbonating Agent",
+        "risk": "low",
+        "explanation": "An inert gas naturally present in the atmosphere, used to carbonate beverages, as a propellant in aerosol food products, and as a modified atmosphere packaging gas to extend shelf life. It gives fizzy drinks their characteristic effervescence. At food-use levels, it poses no health concerns whatsoever. Excessive consumption of carbonated drinks may cause temporary bloating or discomfort, but this is a physical effect of dissolved gas rather than a toxicological concern."
+    },
+    "E296": {
+        "name": "Malic Acid",
+        "category": "Acidity Regulator",
+        "risk": "low",
+        "explanation": "A naturally occurring organic acid found abundantly in apples, cherries, grapes, and other fruits. It provides a tart, slightly sour taste and is widely used as an acidulant in beverages, confectionery, and fruit-flavoured products. Malic acid plays an important role in the citric acid cycle (Krebs cycle) — the body's primary energy production pathway. It is considered completely safe at food-use levels and may even have beneficial effects on energy metabolism and oral health."
+    },
+    "E300": {
+        "name": "Ascorbic Acid (Vitamin C)",
+        "category": "Antioxidant",
+        "risk": "low",
+        "explanation": "The pure form of vitamin C, an essential water-soluble vitamin and powerful antioxidant. In food, it is used to prevent oxidation (browning) in fruits, beverages, and cured meats. Nutritionally, it is crucial for collagen synthesis, immune function, iron absorption, and protection against oxidative damage. Found naturally in citrus fruits, berries, peppers, and green leafy vegetables. Completely safe and beneficial at food-use levels with no toxic concerns."
+    },
+    "E306": {
+        "name": "Mixed Tocopherols (Vitamin E)",
+        "category": "Antioxidant",
+        "risk": "low",
+        "explanation": "A natural mixture of vitamin E compounds extracted from vegetable oils, primarily soybean, sunflower, and wheat germ oil. Used as a fat-soluble antioxidant to protect oils, fats, and fat-containing foods from rancidity. Vitamin E is essential for cell membrane integrity, immune function, and protection against free radical damage. It is considered very safe and nutritionally beneficial at food-use levels. People with soy allergies should check the source."
+    },
+    "E319": {
+        "name": "TBHQ (Tertiary Butylhydroquinone)",
+        "category": "Antioxidant",
+        "risk": "moderate",
+        "explanation": "A synthetic antioxidant used to prevent oxidative rancidity in cooking oils, packaged snacks, noodles, and fried foods. TBHQ is highly effective at extending the shelf life of products containing unsaturated fats. At very high doses (far exceeding food levels), animal studies have shown stomach tumours and DNA damage, though the FDA considers it safe at the regulated limit of 0.02% of fat content. Some studies suggest potential effects on immune function and behaviour. It is banned in Japan and restricted in several other countries."
+    },
+    "E320": {
+        "name": "BHA (Butylated Hydroxyanisole)",
+        "category": "Antioxidant",
+        "risk": "high",
+        "explanation": "A synthetic antioxidant used to preserve fats, oils, and fat-containing foods from going rancid. Found in butter, meat, cereals, chewing gum, and snack foods. The International Agency for Research on Cancer (IARC) has classified BHA as 'possibly carcinogenic to humans' (Group 2B) based on animal studies showing tumour formation in the forestomach. Some studies also suggest endocrine-disrupting potential. Despite this, it remains approved by the FDA and EFSA within strict limits. Many manufacturers are voluntarily switching to natural alternatives."
+    },
+    "E321": {
+        "name": "BHT (Butylated Hydroxytoluene)",
+        "category": "Antioxidant",
+        "risk": "moderate",
+        "explanation": "A synthetic antioxidant closely related to BHA, used to prevent fats and oils from becoming rancid. Found in cereals, chewing gum, snack foods, and some cosmetics. While not classified as carcinogenic by IARC, some animal studies have raised concerns about potential endocrine disruption and effects on liver and kidney function at high doses. EFSA and FDA consider it safe within the established ADI. Many health-conscious consumers prefer to avoid it, and some manufacturers now use natural alternatives like tocopherols."
+    },
+    "E322": {
+        "name": "Lecithin",
+        "category": "Emulsifier",
+        "risk": "low",
+        "explanation": "A naturally occurring phospholipid found in egg yolks, soybeans, and sunflower seeds. It is one of the most widely used food emulsifiers, helping to blend oil and water in products like chocolate, margarine, baked goods, and ice cream. Lecithin is also available as a dietary supplement for its potential benefits to liver health, cholesterol management, and brain function. It is considered very safe by all major regulatory agencies. Those with soy allergies should be cautious with soy-derived lecithin, though highly refined forms typically contain negligible allergen protein."
+    },
+    "E322I": {
+        "name": "Soy Lecithin",
+        "category": "Emulsifier",
+        "risk": "low",
+        "explanation": "The specific soy-derived variant of lecithin, extracted from soybean oil during processing. It is the most common form of lecithin used in the food industry, found in chocolate, baked goods, margarine, and instant foods. Soy lecithin acts as an emulsifier, wetting agent, and release agent. While generally safe, individuals with soy allergies should exercise caution, though highly refined soy lecithin contains very low levels of allergenic soy protein. It is a source of choline, which supports brain health and liver function."
+    },
+    "E330": {
+        "name": "Citric Acid",
+        "category": "Acidity Regulator",
+        "risk": "low",
+        "explanation": "One of the most widely used food additives globally, citric acid occurs naturally in lemons, limes, oranges, and other citrus fruits. Industrially, it is produced by fermenting sugars using Aspergillus niger mould. It serves as an acidulant, flavour enhancer, preservative, and chelating agent. Citric acid is found in virtually every category of processed food and beverage. It is completely safe for the vast majority of people, though extremely high consumption may contribute to dental enamel erosion over time."
+    },
+    "E331": {
+        "name": "Sodium Citrates",
+        "category": "Acidity Regulator",
+        "risk": "low",
+        "explanation": "The sodium salt of citric acid, used as an acidity regulator, emulsifier, and buffering agent. Found in soft drinks, energy drinks, processed cheese, ice cream, and gelatin desserts. Sodium citrate helps control pH levels and improve texture. It is also used medically as an anticoagulant in blood transfusions and as a remedy for urinary tract infections. Considered safe at food-use levels with no significant health concerns, though it does contribute to overall sodium intake."
+    },
+    "E334": {
+        "name": "Tartaric Acid",
+        "category": "Acidity Regulator",
+        "risk": "low",
+        "explanation": "A naturally occurring organic acid found primarily in grapes and wine. It is used as an acidulant and antioxidant in wine production, baking powders, effervescent drinks, and confectionery. Tartaric acid contributes to the tart taste of wine and is the main acid responsible for wine's characteristic 'crispness.' Cream of tartar (potassium bitartrate) is its most familiar culinary form. It is considered safe at normal food concentrations with no known adverse effects."
+    },
+    "E338": {
+        "name": "Phosphoric Acid",
+        "category": "Acidity Regulator",
+        "risk": "moderate",
+        "explanation": "A strong mineral acid used to provide the sharp, tangy flavour in cola drinks and to remove rust from metal. It is also used in processed cheese, jams, and some processed meats. The main health concern is its impact on bone health — high consumption of phosphoric acid (particularly from colas) has been linked to lower bone mineral density and increased fracture risk due to calcium-phosphorus imbalance. Some studies suggest it may contribute to kidney stone formation. Moderation is advised, especially for those at risk of osteoporosis."
+    },
+    "E339II": {
+        "name": "Disodium Phosphate (DSP)",
+        "category": "Acidity Regulator / Emulsifier",
+        "risk": "moderate",
+        "explanation": "A sodium salt of phosphoric acid used as an emulsifier, buffering agent, and protein stabiliser in processed cheese, instant noodles, baked goods, and powdered beverages. It helps maintain smooth texture and prevents separation. Like other phosphate additives, excessive intake may contribute to elevated blood phosphorus levels, which can impair kidney function and promote vascular calcification. People with chronic kidney disease should monitor total phosphate intake from food additives carefully."
+    },
+    "E340": {
+        "name": "Potassium Phosphates",
+        "category": "Acidity Regulator / Stabiliser",
+        "risk": "moderate",
+        "explanation": "Phosphate salts of potassium used as acidity regulators, emulsifiers, and stabilisers in processed foods including non-dairy creamers, biscuits, bread, and canned foods. They help maintain texture and prevent ingredient separation. While individually safe at moderate intake, the cumulative phosphate load from multiple food sources is a concern — excess dietary phosphate has been linked to impaired kidney function, reduced calcium absorption, and increased cardiovascular risk. EFSA has recently lowered the group ADI for all phosphate additives."
+    },
+    "E341": {
+        "name": "Calcium Phosphates",
+        "category": "Raising Agent / Stabiliser",
+        "risk": "moderate",
+        "explanation": "Calcium salts of phosphoric acid used as raising agents, acidity regulators, and mineral supplements in baking powders, flour, breakfast cereals, and toothpaste. They provide both calcium and phosphorus, which are essential for bone health. However, like other phosphate additives, excessive intake can disrupt the calcium-phosphorus balance. The concern is primarily with the total phosphate load in highly processed diets rather than calcium phosphate itself, which is actually a natural component of bone tissue."
+    },
+    "E406": {
+        "name": "Agar-Agar",
+        "category": "Thickener / Gelling Agent",
+        "risk": "low",
+        "explanation": "A natural gelatinous substance derived from red algae (Gelidium and Gracilaria species). It has been used in Asian cuisine for centuries and is the most popular vegetarian and vegan alternative to gelatin. Agar is used in desserts, jellies, ice cream, confectionery, and as a growth medium in microbiology. It is rich in soluble fibre, which may support digestive health and promote satiety. Agar is considered completely safe with no known adverse health effects and is approved worldwide."
+    },
+    "E407": {
+        "name": "Carrageenan",
+        "category": "Thickener / Gelling Agent",
+        "risk": "moderate",
+        "explanation": "A family of sulphated polysaccharides extracted from red seaweed (Chondrus crispus and related species). Widely used as a thickener, gelling agent, and stabiliser in dairy products, plant-based milks, processed meats, and ice cream. Degraded carrageenan (poligeenan) has been shown to cause gut inflammation and tumours in animal studies, raising concerns about food-grade carrageenan's potential for degradation in acidic stomach conditions. While EFSA and FDA maintain it is safe, some researchers and advocacy groups recommend caution, and its use in infant formula has been questioned."
+    },
+    "E410": {
+        "name": "Locust Bean Gum (Carob Gum)",
+        "category": "Thickener",
+        "risk": "low",
+        "explanation": "A natural thickening and gelling agent extracted from the seeds of the carob tree (Ceratonia siliqua). It is widely used in ice cream, cream cheese, bakery products, salad dressings, and infant formula to provide a smooth, creamy texture. Locust bean gum is a soluble dietary fibre that may support digestive health and help regulate blood sugar. It is considered very safe with no significant health concerns. In large amounts, it may cause mild digestive discomfort such as bloating or gas."
+    },
+    "E412": {
+        "name": "Guar Gum",
+        "category": "Thickener",
+        "risk": "low",
+        "explanation": "A natural galactomannan polysaccharide extracted from guar beans (Cyamopsis tetragonoloba), primarily grown in India and Pakistan. It is one of the most versatile food thickeners, used in ice cream, sauces, dressings, gluten-free baked goods, and canned soups. Guar gum is a soluble dietary fibre that may help lower cholesterol, improve blood sugar control, and promote satiety. It is considered safe at food-use levels, though very large quantities may cause digestive discomfort. It has also been used medically for its cholesterol-lowering properties."
+    },
+    "E414": {
+        "name": "Gum Arabic (Acacia Gum)",
+        "category": "Thickener / Stabiliser",
+        "risk": "low",
+        "explanation": "A natural gum obtained from the sap of Acacia trees, primarily Acacia senegal and Acacia seyal, grown in the Sahel region of Africa. It is one of the oldest and most widely used natural food additives, serving as an emulsifier, stabiliser, and glazing agent in soft drinks, confectionery, gummy sweets, and flavouring preparations. Gum Arabic is a soluble dietary fibre with prebiotic properties that may promote beneficial gut bacteria growth. It is considered entirely safe with no adverse health effects and is well-tolerated even at high intakes."
+    },
+    "E415": {
+        "name": "Xanthan Gum",
+        "category": "Thickener",
+        "risk": "low",
+        "explanation": "A polysaccharide produced by fermentation of sugars using the bacterium Xanthomonas campestris. It is one of the most widely used thickeners and stabilisers in the food industry, found in salad dressings, sauces, bakery products, ice cream, and gluten-free foods. Xanthan gum provides excellent viscosity even at low concentrations and is highly stable across a range of temperatures and pH levels. It is considered safe for most people, though very large quantities may cause digestive discomfort, bloating, or gas."
+    },
+    "E440": {
+        "name": "Pectin",
+        "category": "Gelling Agent",
+        "risk": "low",
+        "explanation": "A naturally occurring complex polysaccharide found in the cell walls of many fruits, particularly citrus peel and apples. It is the key ingredient that makes jams and jellies set, and is also used in yoghurts, confectionery, and acidic milk drinks. Pectin is a soluble dietary fibre with documented health benefits including cholesterol reduction, improved blood sugar control, and support for beneficial gut bacteria. It is considered completely safe and nutritionally beneficial with no adverse health concerns."
+    },
+    "E450": {
+        "name": "Diphosphates (Pyrophosphates)",
+        "category": "Raising Agent / Stabiliser",
+        "risk": "moderate",
+        "explanation": "A group of phosphate salts used as raising agents in baking powders, emulsifiers in processed cheese, and moisture-retention agents in processed meats. They help cakes rise, prevent cheese from separating, and improve the texture of deli meats. While individual servings are unlikely to pose health risks, excessive total phosphate intake from processed foods has been linked to reduced calcium absorption, impaired kidney function, and increased cardiovascular risk. EFSA has recommended keeping total phosphate intake below revised safety limits."
+    },
+    "E450I": {
+        "name": "Sodium Dihydrogen Diphosphate",
+        "category": "Raising Agent / Stabiliser",
+        "risk": "moderate",
+        "explanation": "A specific sodium salt of diphosphoric acid commonly used as a fast-acting raising agent in baking powders, pancake mixes, and self-raising flour. It reacts with bicarbonate to produce carbon dioxide, which causes dough to rise. Like other phosphate additives, excessive intake is a concern for kidney health and calcium-phosphorus balance. At typical baking-use levels, it is considered safe. Found in many commercial baked goods and convenience food mixes."
+    },
+    "E450III": {
+        "name": "Trisodium Diphosphate",
+        "category": "Raising Agent / Emulsifier",
+        "risk": "moderate",
+        "explanation": "A sodium phosphate salt used as a slow-acting raising agent, emulsifier, and sequestrant in processed cheese, baking mixes, and canned seafood. It helps control the rate of gas release during baking for a more uniform crumb structure. As with other phosphate additives, its contribution to total dietary phosphate load is the primary concern, particularly for individuals with impaired kidney function. At normal food-processing levels, it is considered safe by EFSA and the FDA."
+    },
+    "E451": {
+        "name": "Triphosphates",
+        "category": "Raising Agent / Stabiliser",
+        "risk": "moderate",
+        "explanation": "A group of phosphate raising agents and moisture-retention additives used in processed meats, seafood products, and bakery items. Triphosphates help meat products retain water, improving juiciness and yield. They share the same health profile as other phosphate additives — safe at moderate intake levels but potentially harmful at high cumulative dietary exposure, particularly for individuals with kidney disease. EFSA has grouped all phosphate additives under a single safety evaluation."
+    },
+    "E451I": {
+        "name": "Sodium Triphosphate",
+        "category": "Raising Agent / Stabiliser",
+        "risk": "moderate",
+        "explanation": "A specific triphosphate widely used in processed meats, frozen seafood, and some baked goods as a moisture-retention and texture-improving agent. It helps bind proteins, retain water, and prevent the formation of ice crystals in frozen foods. Like other phosphate additives, its contribution to total phosphate intake is the main concern. Excessive phosphate intake may promote vascular calcification and bone loss. Safe at regulated food levels according to EFSA."
+    },
+    "E452": {
+        "name": "Polyphosphates",
+        "category": "Stabiliser / Emulsifier",
+        "risk": "moderate",
+        "explanation": "Long-chain phosphate additives used as moisture-retention agents, emulsifiers, and texture modifiers in processed meats, cheese, and seafood products. Polyphosphates help improve the water-holding capacity and sliceability of deli meats and the melting properties of processed cheese. Like all phosphate additives, cumulative dietary exposure is a concern. High phosphate intake has been associated with cardiovascular calcification and bone demineralisation, particularly in individuals with chronic kidney disease. Used within food-grade limits, they are considered safe."
+    },
+    "E460": {
+        "name": "Cellulose",
+        "category": "Anti-Caking Agent / Thickener",
+        "risk": "low",
+        "explanation": "The most abundant organic polymer on Earth, found in every plant cell wall. In food processing, purified cellulose (microcrystalline cellulose or powdered cellulose) is used as an anti-caking agent in shredded cheese, a bulking agent in low-calorie foods, a fibre supplement, and a stabiliser in sauces and ice cream. Cellulose is an insoluble dietary fibre that passes through the digestive system largely intact, promoting digestive regularity. It is considered completely safe with no adverse health effects."
+    },
+    "E466": {
+        "name": "Carboxymethylcellulose (CMC)",
+        "category": "Thickener / Stabiliser",
+        "risk": "moderate",
+        "explanation": "A chemically modified form of cellulose that dissolves readily in water, used as a thickener, stabiliser, and emulsifier in ice cream, sauces, gluten-free products, toothpaste, and pharmaceutical tablets. Recent research has raised concerns about CMC's potential to alter the gut microbiome and thin the protective mucus layer of the intestine, which may promote gut inflammation. A human clinical trial showed that CMC consumption changed gut microbiota composition. While EFSA still considers it safe, emerging evidence suggests that more research is warranted."
+    },
+    "E470": {
+        "name": "Fatty Acid Salts (Sodium/Potassium/Calcium Stearate)",
+        "category": "Emulsifier / Stabiliser",
+        "risk": "low",
+        "explanation": "Salts of various fatty acids (stearic, palmitic, oleic) used as emulsifiers, anti-caking agents, and release agents in confectionery, baked goods, and processed foods. They help prevent foods from sticking to moulds and equipment during manufacturing. Fatty acid salts are derived from natural fats and are metabolised like ordinary dietary fats. They are considered safe at food-use levels with no known adverse health effects."
+    },
+    "E471": {
+        "name": "Mono- and Diglycerides of Fatty Acids",
+        "category": "Emulsifier",
+        "risk": "moderate",
+        "explanation": "One of the most commonly used food emulsifiers, derived from glycerol and natural fatty acids (often from palm oil, soy, or animal fat). Found in bread, ice cream, margarine, chocolate, and many processed foods. They help stabilise mixtures of oil and water, improve texture, and extend shelf life. The main concerns are their potential to contain traces of trans fats formed during processing, and recent research suggesting certain emulsifiers may alter the gut microbiome. Some formulations may not be suitable for vegans or those with religious dietary requirements."
+    },
+    "E472E": {
+        "name": "DATEM (Diacetyl Tartaric Acid Esters)",
+        "category": "Emulsifier",
+        "risk": "moderate",
+        "explanation": "Produced by the esterification of mono- and diglycerides with diacetyl tartaric acid anhydride. DATEM is a powerful dough conditioner and emulsifier widely used in bread, bakery products, and some confectionery. It strengthens the gluten network, producing lighter, more voluminous bread with better crumb structure. While approved by the FDA and EFSA, some animal studies have associated high doses with cardiac and adrenal changes. At standard food-use levels, it is considered safe, but health-conscious consumers may prefer to check for it in ingredient lists."
+    },
+    "E492": {
+        "name": "Sorbitan Tristearate",
+        "category": "Emulsifier",
+        "risk": "low",
+        "explanation": "An emulsifier made from sorbitol and stearic acid, used primarily in chocolate, chocolate coatings, and confectionery products. It improves the flow and workability of chocolate during manufacturing and helps prevent 'fat bloom' (the white coating that can appear on chocolate during storage). Sorbitan tristearate is well-tolerated and considered safe at food-use levels by both EFSA and the FDA."
+    },
+    "E500": {
+        "name": "Sodium Carbonates",
+        "category": "Raising Agent",
+        "risk": "low",
+        "explanation": "A group comprising sodium carbonate, sodium bicarbonate (baking soda), and sodium sesquicarbonate. They are among the most familiar kitchen chemicals, used as raising agents in baking, acidity regulators, and anti-caking agents. Baking soda (E500ii) is a household staple used in cakes, biscuits, and quick breads. Sodium carbonates are considered entirely safe at food-use levels. The main consideration is their contribution to sodium intake, which should be moderated in hypertensive individuals."
+    },
+    "E500I": {
+        "name": "Sodium Carbonate (Washing Soda)",
+        "category": "Raising Agent / Acidity Regulator",
+        "risk": "low",
+        "explanation": "A mild alkaline salt used as a pH regulator and raising agent in food processing. In food, it is used in noodle production (particularly Chinese alkaline noodles), as a processing aid in cocoa production to develop colour and flavour, and in some baked goods. It is also used industrially as washing soda. At food-use levels, it is considered safe, though direct consumption of large undiluted amounts can irritate the digestive tract."
+    },
+    "E500II": {
+        "name": "Sodium Bicarbonate (Baking Soda)",
+        "category": "Raising Agent",
+        "risk": "low",
+        "explanation": "The most widely known raising agent — ordinary baking soda. Used universally in cakes, cookies, muffins, scones, and quick breads, where it reacts with acids (cream of tartar, buttermilk, vinegar) to produce carbon dioxide gas that makes dough rise. Also used as an antacid and a natural cleaning agent. Baking soda is considered completely safe in food. The main consideration is its sodium content, which contributes to overall sodium intake."
+    },
+    "E501": {
+        "name": "Potassium Carbonates",
+        "category": "Raising Agent / Acidity Regulator",
+        "risk": "low",
+        "explanation": "The potassium salts of carbonic acid, used as acidity regulators, stabilisers, and raising agents in baked goods, cocoa processing, and confectionery. Potassium carbonate (potash) is used in the production of Dutch-process cocoa to neutralise acidity and develop a darker colour. Unlike sodium-based raising agents, potassium carbonates do not contribute to sodium intake. They are considered safe at food-use levels with no known adverse effects."
+    },
+    "E501I": {
+        "name": "Potassium Carbonate",
+        "category": "Raising Agent",
+        "risk": "low",
+        "explanation": "A specific form of potassium carbonate used as a raising agent, pH regulator, and processing aid. Most commonly used in Dutch-process cocoa production to neutralise natural cocoa acids, resulting in a milder, darker cocoa. Also used in traditional cookie and gingerbread recipes in some European countries. Considered safe at food-use levels with no adverse health effects."
+    },
+    "E503": {
+        "name": "Ammonium Carbonates",
+        "category": "Raising Agent",
+        "risk": "low",
+        "explanation": "A group of ammonium salts including ammonium carbonate, ammonium bicarbonate, and ammonium carbamate. Used as raising agents in flat baked goods like crackers, biscuits, and cookies. During baking, they decompose completely into carbon dioxide, ammonia gas, and water — the ammonia fully evaporates, leaving no residue. This makes them ideal for thin, crisp products where baking soda might leave an aftertaste. Considered safe when used in products that are thoroughly baked."
+    },
+    "E508": {
+        "name": "Potassium Chloride",
+        "category": "Mineral Salt",
+        "risk": "moderate",
+        "explanation": "A naturally occurring mineral salt used as a salt substitute to reduce sodium content in processed foods, seasonings, and sports drinks. It provides a salty taste (sometimes with a slight bitter aftertaste) without contributing to sodium intake. While potassium is an essential mineral necessary for heart function, nerve transmission, and muscle contraction, excessive intake can cause hyperkalaemia (elevated blood potassium), which may lead to dangerous heart arrhythmias. Individuals with kidney disease or taking potassium-sparing medications should monitor intake carefully."
+    },
+    "E551": {
+        "name": "Silicon Dioxide (Silica)",
+        "category": "Anti-Caking Agent",
+        "risk": "low",
+        "explanation": "A naturally occurring mineral (the main component of sand and quartz) used as an anti-caking agent in powdered foods, spice mixes, instant soups, coffee creamers, and dietary supplements. It prevents powder clumping by absorbing moisture. Silicon dioxide passes through the digestive system without being absorbed and is excreted unchanged. EFSA and the FDA consider it safe at food-use levels (typically up to 2% by weight). There is no credible evidence of adverse health effects from food-grade silicon dioxide."
+    },
+    "E621": {
+        "name": "Monosodium Glutamate (MSG)",
+        "category": "Flavour Enhancer",
+        "risk": "moderate",
+        "explanation": "The sodium salt of glutamic acid, one of the most abundant naturally occurring amino acids found in tomatoes, cheese, soy sauce, and mushrooms. MSG enhances the 'umami' (savoury) taste perception. It is widely used in Asian cuisine, snack seasonings, soups, and processed foods. While some individuals report sensitivity symptoms ('Chinese Restaurant Syndrome') including headache, flushing, and numbness, extensive scientific reviews by the FDA, EFSA, and WHO have found no consistent evidence linking MSG to these symptoms in controlled studies. It does contribute to sodium intake."
+    },
+    "E627": {
+        "name": "Disodium Guanylate",
+        "category": "Flavour Enhancer",
+        "risk": "moderate",
+        "explanation": "A nucleotide-based flavour enhancer derived from guanylic acid, often used in combination with MSG (E621) to produce a synergistic umami effect at lower concentrations. Found in instant noodles, snack seasonings, crisps, and processed foods. It is produced commercially from dried fish or yeast extract. People with gout or high uric acid levels should avoid it, as purines from nucleotides are metabolised to uric acid. It may also trigger asthmatic reactions in sensitive individuals. Not suitable for those following a strict vegan diet if derived from animal sources."
+    },
+    "E631": {
+        "name": "Disodium Inosinate",
+        "category": "Flavour Enhancer",
+        "risk": "moderate",
+        "explanation": "A nucleotide-based flavour enhancer derived from inosinic acid, typically extracted from meat or fish. It works synergistically with MSG (E621) to intensify umami flavour at lower concentrations. Commonly found in instant noodles, savoury snacks, soups, and processed meat products. Like E627, it should be avoided by people with gout or elevated uric acid, as purine-based compounds can worsen these conditions. It is not suitable for vegetarians or vegans when derived from animal sources."
+    },
+    "E635": {
+        "name": "Disodium Ribonucleotides",
+        "category": "Flavour Enhancer",
+        "risk": "moderate",
+        "explanation": "A 50:50 blend of disodium guanylate (E627) and disodium inosinate (E631). It is a highly potent umami flavour enhancer that works synergistically with MSG to create a powerful savoury taste at very low concentrations. Found in instant noodles, crisps, snack seasonings, and processed foods. The same dietary precautions apply as for its component parts: people with gout, kidney stones, or high uric acid levels should avoid it due to its purine content. Some individuals report skin rashes or itching as a sensitivity reaction."
+    },
+    "E950": {
+        "name": "Acesulfame K (Acesulfame Potassium)",
+        "category": "Sweetener",
+        "risk": "moderate",
+        "explanation": "A synthetic, calorie-free sweetener approximately 200 times sweeter than sugar. It is commonly used in soft drinks, table-top sweeteners, dairy products, and sugar-free confectionery, often in combination with aspartame or sucralose. Acesulfame K is heat-stable (unlike aspartame), making it suitable for baking. It has a slightly bitter aftertaste at high concentrations. While generally regarded as safe by the FDA and EFSA, some animal studies have raised concerns about potential effects on the gut microbiome, insulin response, and cognitive function. It passes through the body without being metabolised."
+    },
+    "E951": {
+        "name": "Aspartame",
+        "category": "Sweetener",
+        "risk": "moderate",
+        "explanation": "One of the most widely used and extensively studied artificial sweeteners, approximately 200 times sweeter than sugar. Found in diet soft drinks, sugar-free chewing gum, table-top sweeteners, and many 'light' products. In 2023, the IARC classified aspartame as 'possibly carcinogenic to humans' (Group 2B), though EFSA and the FDA maintained that it is safe within the established ADI of 40 mg/kg body weight per day. Individuals with phenylketonuria (PKU) must avoid aspartame, as it contains phenylalanine. It degrades at high temperatures, making it unsuitable for cooking."
+    },
+    "E952": {
+        "name": "Cyclamate (Cyclamic Acid)",
+        "category": "Sweetener",
+        "risk": "moderate",
+        "explanation": "A synthetic sweetener about 30-50 times sweeter than sugar. It was banned in the United States in 1969 after animal studies suggested a link to bladder cancer, though subsequent research has largely failed to confirm this in humans. It remains approved in the EU, Canada, and over 130 other countries. Cyclamate is often blended with saccharin to mask each other's aftertaste. EFSA considers it safe within the ADI of 7 mg/kg body weight per day, though ongoing debate about its safety continues."
+    },
+    "E955": {
+        "name": "Sucralose",
+        "category": "Sweetener",
+        "risk": "low",
+        "explanation": "A calorie-free artificial sweetener made by chemically modifying sucrose (table sugar) to be approximately 600 times sweeter. It is highly heat-stable and used in baked goods, beverages, dairy products, and table-top sweeteners. Sucralose is generally regarded as safe by the FDA and EFSA. However, some recent studies suggest that heating sucralose at high temperatures may produce potentially harmful chlorinated compounds, and there is emerging evidence of effects on the gut microbiome and glucose-insulin response at high doses."
+    },
+    "E960": {
+        "name": "Steviol Glycosides (Stevia)",
+        "category": "Sweetener",
+        "risk": "low",
+        "explanation": "Naturally derived sweeteners extracted from the leaves of the Stevia rebaudiana plant, native to South America, where indigenous communities have used it for centuries. Steviol glycosides (primarily Rebaudioside A) are 200-350 times sweeter than sugar with zero calories. They are widely used in beverages, dairy products, and table-top sweeteners as a natural sugar alternative. Considered safe at levels within the ADI of 4 mg/kg body weight per day. Some studies suggest beneficial effects on blood pressure and blood sugar levels."
+    },
+    "E960C": {
+        "name": "Rebaudioside C (Stevia variant)",
+        "category": "Sweetener",
+        "risk": "low",
+        "explanation": "A specific steviol glycoside extracted from the stevia plant, closely related to Rebaudioside A but with a slightly different sweetness profile. Used in beverages and low-calorie food products as a natural, zero-calorie sweetener. Rebaudioside C has a cleaner, less bitter taste than some other stevia compounds. It shares the same safety profile as other steviol glycosides and is considered safe within established ADI limits. Approved for use in the EU, US, and many other markets."
+    },
+    "E1100": {
+        "name": "Amylase",
+        "category": "Enzyme",
+        "risk": "low",
+        "explanation": "A naturally occurring digestive enzyme that breaks down starch into simpler sugars (maltose and glucose). It is produced commercially from fungal sources (Aspergillus oryzae) or bacterial sources and is widely used in bread making to improve dough handling, crust colour, and shelf life. Amylase is also present naturally in human saliva and pancreatic juice, where it plays a critical role in carbohydrate digestion. It is considered completely safe with no adverse health effects and is typically deactivated during baking."
+    }
+}

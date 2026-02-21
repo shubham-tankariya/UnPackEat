@@ -1,6 +1,4 @@
-# formatter.py
-
-def format_response(normalized, analyzed):
+def format_response(normalized, analyzed, ai_insights=None):
 
     meta = normalized["metadata"]
 
@@ -40,5 +38,6 @@ def format_response(normalized, analyzed):
         "environment": {
             "ecoscore":  meta.get("ecoscore"),
             "packaging": meta.get("packaging"),
-        }
+        },
+        "ai_insights": ai_insights,
     }

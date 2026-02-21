@@ -1,8 +1,5 @@
-# normalizer.py
-
 import re
 
-# Patterns that indicate an entry is junk / OCR packaging noise, not an ingredient
 _JUNK_PATTERNS = re.compile(
     r"do not buy|keep away|marketed by|survey no|anc no|allergen advice|"
     r"^open$|^[0-9]+$|foundamaged|direct sunlight",
@@ -12,10 +9,8 @@ _JUNK_PATTERNS = re.compile(
 def _is_junk(item):
     """Return True if an ingredient entry looks like packaging text or OCR noise."""
     text = (item.get("text") or "").strip()
-    # Zero-percent, not in taxonomy, text matches junk pattern → discard
     if _JUNK_PATTERNS.search(text):
         return True
-    # Very long taxonomy-unknown strings with zero percent are almost always junk
     if item.get("is_in_taxonomy") == 0 and item.get("percent_estimate", 1) == 0 and len(text) > 30:
         return True
     return False
@@ -49,18 +44,13 @@ def normalize(extracted):
 
     for ing in raw_ing:
         if _is_junk(ing):
-            continue                   # drop OCR/packaging noise
+            continue
         n = normalize_ingredient(ing)
         if is_additive(ing):
             additives_from_ingredients.append(n)
         else:
             ingredients.append(n)
 
-    # ------------------------------------------------------------------ #
-    # PRIMARY source: additives_tags from OpenFoodFacts (more complete)   #
-    # FALLBACK: additives found while scanning the structured ingredient  #
-    #           list (used when additives_tags is absent/empty).          #
-    # ------------------------------------------------------------------ #
     additives_raw = extracted.get("additives_raw") or []
 
     if additives_raw:
@@ -80,7 +70,6 @@ def normalize(extracted):
                 "from_palm_oil":        None,
                 "is_in_taxonomy":       None,
             }
-            # Enrich with structured data if the same additive appears there
             for a in additives_from_ingredients:
                 if (a.get("id") or "").lower() == tag.lower():
                     entry.update({k: v for k, v in a.items() if v is not None})
@@ -97,10 +86,6 @@ def normalize(extracted):
                 uniq[code] = a
         additives = list(uniq.values())
 
-    # ------------------------------------------------------------------ #
-    # PALM OIL: check for "yes" OR "maybe" to flag possible palm oil use. #
-    # Also scan ingredient text for the word "palm".                      #
-    # ------------------------------------------------------------------ #
     contains_palm_oil = any(
         (i.get("from_palm_oil") or "") in ("yes", "maybe")
         or "palm" in (i.get("id") or "")
@@ -108,11 +93,6 @@ def normalize(extracted):
         for i in raw_ing
     )
 
-    # ------------------------------------------------------------------ #
-    # DOMINANT ingredients: top 4 by estimated % using ONLY parent-level  #
-    # entries from the original (non-flattened) list to avoid double-     #
-    # counting parent+child pairs. Filter junk first.                     #
-    # ------------------------------------------------------------------ #
     seen_text = set()
     dom = []
     for ing in raw_ing:
@@ -138,7 +118,7 @@ def normalize(extracted):
             "additives":        additives,
             "dominant":         dom,
             "contains_palm_oil": contains_palm_oil,
-            "total_count":      len(ingredients),   # count only real ingredients
+            "total_count":      len(ingredients),
         },
         "allergens": extracted["allergens_raw"],
         "serving":   extracted["serving"],
