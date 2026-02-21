@@ -1,8 +1,8 @@
 """
 ai_insights.py -- Generate contextual AI commentary using OpenAI.
 
-Uses gpt-4o-mini (cheap, fast, extremely reliable JSON).
-Runs only if OPENAI_API_KEY is set; otherwise returns None.
+Uses Groq's LLaMA 3 model (fast, free, supports JSON).
+Runs only if GROQ_API_KEY is set; otherwise returns None.
 """
 
 import os
@@ -22,15 +22,15 @@ def _get_client():
     if client is not None:
         return client, None
 
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
-        return None, "OPENAI_API_KEY not set in .env"
+        return None, "GROQ_API_KEY not set in .env"
 
     try:
-        client = OpenAI(api_key=api_key)
+        client = OpenAI(api_key=api_key, base_url="https://api.groq.com/openai/v1")
         return client, None
     except Exception as e:
-        return None, f"OpenAI initialization failed: {e}"
+        return None, f"Groq initialization failed: {e}"
 
 
 INSIGHT_PROMPT = """You are a nutritionist AI. Given this product data, provide a concise health analysis.
@@ -47,10 +47,10 @@ NOVA Group: {nova}
 Respond with ONLY valid JSON (no markdown, no code fences):
 {{
   "summary": "One compelling sentence summarizing this product's health profile",
-  "detailed_analysis": "2-3 sentences explaining the key health implications of consuming this product regularly",
-  "better_alternatives": "Suggest 2-3 healthier alternatives in the same product category, be specific",
-  "who_should_avoid": "List specific groups who should limit or avoid this product and why",
-  "ideal_consumption": "Practical guidance on how often and how much is reasonable"
+  "key_benefits": ["List 2-3 specific nutritional benefits or positive aspects"],
+  "key_concerns": ["List 2-3 specific health concerns or negative aspects"],
+  "consumption_advice": "Practical guidance on how often and how much is reasonable (one sentence)",
+  "alternative_suggestions": ["Suggest 2 specific healthier alternatives in the same category"]
 }}
 """
 
@@ -102,7 +102,7 @@ def generate_insights(normalized, analyzed):
 
     try:
         resp = _retry_request(lambda: client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="llama-3.3-70b-versatile",
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"}
         ))

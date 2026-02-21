@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | UnPackEat</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="user_detail_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="navbar-scroll.js" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <div class="nav-pill-container shadow-sm">
+                    <a class="navbar-brand fw-bold text-warning m-0" href="index.html">UnPackEat</a>
+
+                    <div class="collapse navbar-collapse justify-content-center" id="desktopMenu">
+                        <ul class="navbar-nav gap-4">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+                            <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Contribution.html">Contribution</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="user_detail.html"
+                            class="d-flex align-items-center text-white text-decoration-none bg-white bg-opacity-10 px-3 py-2 rounded-pill">
+                            <img src="https://github.com/mdo.png" alt="User" width="32" height="32"
+                                class="rounded-pill me-2 border border-warning" />
+                            <span class="d-none d-sm-inline fw-semibold">Dashboard</span>
+                        </a>
+                        <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mobileMenu">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation -->
+                 
+                <div class="collapse d-lg-none mt-3" id="mobileMenu">
+                    <div class="card card-body border-0 shadow-lg rounded-4" style="background: var(--primary);">
+                        <ul class="navbar-nav text-center gap-3">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+                            <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Contribution.html">Contribution</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <main class="main-content">
+            <!-- Hero Header -->
+            <section class="welcome-header" data-aos="zoom-in" data-aos-duration="800">
+                <div class="header-text">
+                    <h1>Hi, User! 👋</h1>
+                    <p>You've analyzed 12 products this week. Your health streak is on fire!</p>
+                    <div class="mt-4">
+                        <span class="badge bg-white text-dark rounded-pill px-3 py-2 me-2">Vegan Expert</span>
+                        <span class="badge bg-warning text-dark rounded-pill px-3 py-2">Allergy Safe</span>
+                    </div>
+                </div>
+                <div class="header-image d-none d-lg-block">
+                    <!-- Icon or minor decorative element -->
+                    <i class="fa-solid fa-shield-heart" style="font-size: 8rem; opacity: 0.2;"></i>
+                </div>
+            </section>
+
+            <!-- Quick Action Hub -->
+            <div class="action-hub" data-aos="fade-up">
+                <i class="fa-solid fa-magnifying-glass text-muted ms-2"></i>
+                <input type="text" class="action-input" placeholder="Paste product name, URL or barcode...">
+                <button class="btn-primary-capsule">
+                    <i class="fa-solid fa-bolt"></i> Quick Analysis
+                </button>
+                <div class="vr mx-2 d-none d-md-block"></div>
+                <button class="btn btn-outline-dark rounded-pill px-4 d-none d-md-block">
+                    <i class="fa-solid fa-barcode"></i> Scan
+                </button>
+            </div>
+
+            <!-- Stats & Info Grid -->
+            <div class="stat-grid">
+                <div class="card-premium" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon bg-success bg-opacity-10 text-success">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="card-title">Dietary Focus</h3>
+                    <p class="text-muted">Currently tracking <strong>Vegan</strong> and <strong>Plant-based</strong>
+                        alternatives.</p>
+                    <a href="#" class="mt-auto text-success fw-bold text-decoration-none small">Manage Preferences →</a>
+                </div>
+
+                <div class="card-premium" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon bg-danger bg-opacity-10 text-danger">
+                        <i class="fa-solid fa-hand-dots"></i>
+                    </div>
+                    <h3 class="card-title">Active Allergens</h3>
+                    <p class="text-muted">2 Allergens monitored: <strong>Peanuts</strong> and
+                        <strong>Shellfish</strong>.</p>
+                    <a href="#" class="mt-auto text-danger fw-bold text-decoration-none small">Update Watchlist →</a>
+                </div>
+
+                <div class="card-premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon bg-primary bg-opacity-10 text-primary">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3 class="card-title">Target Goals</h3>
+                    <p class="text-muted">Focusing on <strong>Low Sodium</strong> and <strong>High Fiber</strong>
+                        intake.</p>
+                    <a href="#" class="mt-auto text-primary fw-bold text-decoration-none small">Track History →</a>
+                </div>
+            </div>
+
+            <!-- Main Activity Rows -->
+            <div class="activity-section">
+                <!-- Left: Recent Activity -->
+                <div class="activity-card" data-aos="fade-right">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold m-0 text-primary">Recent Analysis</h4>
+                        <button class="btn btn-link text-decoration-none p-0 text-muted">View All</button>
+                    </div>
+
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <span class="status-dot status-safe"></span>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0 fw-bold">Organic Almond Milk (Oatly)</h6>
+                                <small class="text-muted">Analyzed 2 hours ago • Clean Label</small>
+                            </div>
+                            <button class="btn btn-light btn-sm rounded-circle"><i
+                                    class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        <div class="activity-item">
+                            <span class="status-dot status-warn"></span>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0 fw-bold">Dark Chocolate Digestive</h6>
+                                <small class="text-muted">Yesterday • High Saturated Fat</small>
+                            </div>
+                            <button class="btn btn-light btn-sm rounded-circle"><i
+                                    class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        <div class="activity-item">
+                            <span class="status-dot status-danger"></span>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0 fw-bold">Instant Spicy Noodles</h6>
+                                <small class="text-muted">Yesterday • Additives Warning (E621)</small>
+                            </div>
+                            <button class="btn btn-light btn-sm rounded-circle"><i
+                                    class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Saved/Featured -->
+                <div class="activity-card" data-aos="fade-left">
+                    <h4 class="fw-bold mb-4 text-primary">Saved Items</h4>
+                    <div class="product-grid">
+                        <div class="product-tile">
+                            <img src="https://images.unsplash.com/photo-1550989460-0adfca14014d?auto=format&fit=crop&w=400&q=80"
+                                alt="Item">
+                            <div class="product-overlay">Greek Yogurt</div>
+                        </div>
+                        <div class="product-tile">
+                            <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=400&q=80"
+                                alt="Item">
+                            <div class="product-overlay">Avocado Oil</div>
+                        </div>
+                        <div class="product-tile">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80"
+                                alt="Item">
+                            <div class="product-overlay">Granola Bowl</div>
+                        </div>
+                        <div class="product-tile">
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=80"
+                                alt="Item">
+                            <div class="product-overlay">Peanut Butter</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+    </script>
+</body>
+
+</html>

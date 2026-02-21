@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Analysis V2 - Product Name</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="analysis2.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top mt-3">
+            <div class="container">
+                <!-- PILL SHELL (FIXED SHAPE) -->
+                <div class="w-100 px-4 py-2 border rounded-pill shadow-sm" style="background-color: #626f47">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <!-- Brand -->
+                        <a class="navbar-brand fw-bold text-warning text-nowrap m-0" href="index.html">
+                            UnPackEat
+                        </a>
+
+                        <!-- Desktop menu -->
+                        <ul class="navbar-nav d-none d-lg-flex gap-3 mb-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="awareness.html">Awareness</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="FAQ.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="Contribution.html">Contribution</a>
+                            </li>
+                        </ul>
+
+                        <!-- Right side -->
+                        <div class="d-flex align-items-center gap-2">
+                            <input class="form-control rounded-pill d-none d-lg-block" type="search" placeholder="Search" />
+                            <button class="btn btn-outline-warning rounded-pill d-none d-lg-block">
+                                Search
+                            </button>
+
+                            <a href="user.html" class="d-flex align-items-center text-white text-decoration-none">
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2" />
+                                <strong>User</strong>
+                            </a>
+
+                            <!-- Hamburger -->
+                            <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE MENU -->
+                <div class="collapse d-lg-none mt-3 mx-auto" id="mobileMenu" style="max-width: 100%">
+                    <div class="card card-body shadow-sm rounded-4 text-center mx-auto" style="max-width: 95%; background-color: #626f47">
+                        <ul class="navbar-nav gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="awareness.html">Awareness</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="FAQ.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="Contribution.html">Contribution</a>
+                            </li>
+                        </ul>
+
+                        <hr class="border-light" />
+
+                        <input class="form-control rounded-pill mb-2" type="search" placeholder="Search" />
+                        <button class="btn btn-outline-light rounded-pill w-100">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="analysis-container">
+        <!-- TIER 1: Top Row Wrapper -->
+        <div class="top-row-flex">
+            <!-- Block 1: Hero Identity -->
+            <div class="glass-card block-hero">
+                <div class="hero-layout">
+                    <!-- Left: Product Image -->
+                    <div class="hero-image-side">
+                        <img id="product-image" src="https://images.openfoodfacts.net/images/products/890/601/050/1570/front_en.13.400.jpg" alt="Product" class="product-img-v2">
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="hero-content-side">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <h1 id="product-name" class="h3 m-0">Balaji Wafers Crunchex</h1>
+                            <div class="gauge-wrapper">
+                                <svg class="segmented-gauge" viewBox="0 0 100 100">
+                                    <defs>
+                                        <mask id="gauge-mask">
+                                            <circle cx="50" cy="50" r="42" fill="none" stroke="white" stroke-width="12" stroke-dasharray="2 1.5"></mask>
+                                    </defs>
+                                    <circle class="gauge-track" cx="50" cy="50" r="42" mask="url(#gauge-mask)"></circle>
+                                    <circle id="gauge-progress" class="gauge-segment-fill" cx="50" cy="50" r="42" mask="url(#gauge-mask)"></circle>
+                                </svg>
+                                <div class="gauge-center">
+                                    <span id="health-score" class="score-number">33</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="product-brand" class="mb-3" style="color: var(--text-muted); font-size: 0.9rem;">by Balaji</p>
+
+                        <div id="verdict" class="verdict-tag mb-3">Limit consumption</div>
+
+                        <!-- Badge Cluster -->
+                        <div class="badge-cluster mb-4">
+                            <div id="nutriscore-badge" class="badge-v2 nutri-e">Nutri-Score E</div>
+                            <div id="ecoscore-badge" class="badge-v2 eco-b">EcoScore B</div>
+                            <div id="nova-badge" class="badge-v2 nova-4">NOVA 4</div>
+                        </div>
+
+                        <!-- Highlight Chips -->
+                        <div class="highlight-section mb-4">
+                            <div class="d-flex gap-2">
+                                <div class="highlight-chip chip-likes">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span id="like-count">1 Like</span>
+                                </div>
+                                <div class="highlight-chip chip-concerns">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span id="concern-count">3 Concerns</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trust Strip -->
+                        <div class="trust-strip">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="trust-item" title="Data Completeness">
+                                    <i class="fas fa-database me-1"></i> 100% Complete
+                                </span>
+                                <div class="trust-icons">
+                                    <i class="fas fa-check-circle text-success" title="Verified Data"></i>
+                                    <i class="fas fa-info-circle" id="data-warning-icon" style="display:none;" title="Data Quality Warnings"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Block 2: AI Insights -->
+            <div class="glass-card block-ai-insights">
+                <div class="card-header-v2">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fas fa-robot text-primary"></i>
+                        <h2 class="section-title m-0" style="border:0; padding:0;">AI Insights</h2>
+                    </div>
+                    <button class="btn-minimize" onclick="toggleMinimize(this)"><i class="fas fa-minus"></i></button>
+                </div>
+                <div id="ai-content" class="ai-content-glow">
+                    <p id="ai-explanation" class="mb-3"></p>
+                    <div class="ai-suggestion-box">
+                        <h4 class="h6 fw-bold mb-2"><i class="fas fa-lightbulb text-warning me-2"></i>Smart Suggestion</h4>
+                        <p id="ai-suggestion" class="m-0 small"></p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.top-row-flex -->
+
+        <!-- Block 2: Traffic-Light Nutrient Row -->
+        <div class="glass-card block-traffic-lights">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="d-flex align-items-center gap-3">
+                    <h2 class="section-title m-0" style="border:0; padding:0;">At a Glance</h2>
+                    <div class="serving-visual">
+                        <i class="fas fa-utensils text-muted small"></i>
+                        <span id="serving-size-text" class="small fw-semibold">1 serving = 30g</span>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-sm toggle-switch">
+                    <input type="radio" class="btn-check" name="unitToggle" id="toggle-100g" checked>
+                    <label class="btn btn-outline-secondary" for="toggle-100g">Per 100g</label>
+                    <input type="radio" class="btn-check" name="unitToggle" id="toggle-serv">
+                    <label class="btn btn-outline-secondary" for="toggle-serv">Per Serving</label>
+                </div>
+            </div>
+            
+            <div class="traffic-light-grid">
+                <!-- Energy -->
+                <div class="nutrient-tile">
+                    <span class="tile-label">Energy</span>
+                    <span class="tile-value" id="val-energy">528 kcal</span>
+                    <div class="rda-bar">
+                        <div class="rda-fill amber" style="width: 26%;"></div>
+                    </div>
+                    <span class="rda-text">26% RDA</span>
+                </div>
+                <!-- Fat -->
+                <div class="nutrient-tile">
+                    <span class="tile-label">Total Fat</span>
+                    <span class="tile-value" id="val-fat">32.3g</span>
+                    <div class="rda-bar">
+                        <div class="rda-fill red" style="width: 46%;"></div>
+                    </div>
+                    <span class="rda-text">46% RDA</span>
+                </div>
+                <!-- Saturated Fat -->
+                <div class="nutrient-tile">
+                    <span class="tile-label">Sat. Fat</span>
+                    <span class="tile-value" id="val-sat-fat">14.4g</span>
+                    <div class="rda-bar">
+                        <div class="rda-fill red" style="width: 72%;"></div>
+                    </div>
+                    <span class="rda-text">72% RDA</span>
+                </div>
+                <!-- Sugars -->
+                <div class="nutrient-tile">
+                    <span class="tile-label">Sugars</span>
+                    <span class="tile-value" id="val-sugars">3.0g</span>
+                    <div class="rda-bar">
+                        <div class="rda-fill green" style="width: 3%;"></div>
+                    </div>
+                    <span class="rda-text">3% RDA</span>
+                </div>
+                <!-- Salt -->
+                <div class="nutrient-tile">
+                    <span class="tile-label">Salt</span>
+                    <span class="tile-value" id="val-salt">0.002g</span>
+                    <div class="rda-bar">
+                        <div class="rda-fill green" style="width: 1%;"></div>
+                    </div>
+                    <span class="rda-text">1% RDA</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="glass-card block-highlights">
+            <div class="card-header-v2">
+                <h2 class="section-title m-0" style="border:0; padding:0;">Key Highlights</h2>
+                <button class="btn-minimize" onclick="toggleMinimize(this)"><i class="fas fa-minus"></i></button>
+            </div>
+            <div class="badge-list" id="positives-list">
+                <span class="badge-custom flag-green">High fiber</span>
+            </div>
+            
+            <h2 class="section-title mt-4">Risk Flags</h2>
+            <div class="badge-list mb-3" id="risks-list">
+                <span class="badge-custom flag-red">High saturated fat</span>
+                <span class="badge-custom flag-red">Ultra-processed</span>
+                <span class="badge-custom flag-red">High additives</span>
+            </div>
+
+            <div id="warnings-list" class="small" style="font-weight: 600;">
+                <p class="mb-1 text-danger">⚠️ Contains palm oil</p>
+                <p class="mb-0 text-danger">⚠️ Allergens: soy, nuts, milk</p>
+            </div>
+        </div>
+
+        <div class="glass-card block-table">
+            <div class="card-header-v2">
+                <h2 class="section-title m-0" style="border:0; padding:0;">Score Breakdown</h2>
+                <button class="btn-minimize" onclick="toggleMinimize(this)"><i class="fas fa-minus"></i></button>
+            </div>
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Reason</th>
+                        <th>Value</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody id="score-table-body">
+                    <!-- Dynamic Data -->
+                    <tr>
+                        <td>High saturated fat</td>
+                        <td>14.4</td>
+                        <td class="text-danger">-10</td>
+                    </tr>
+                    <tr>
+                        <td>Ultra-processed</td>
+                        <td>NOVA 4</td>
+                        <td class="text-danger">-10</td>
+                    </tr>
+                    <tr>
+                        <td>High fiber</td>
+                        <td>9.3g</td>
+                        <td class="text-success">+8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="glass-card block-details">
+            <div class="card-header-v2">
+                <h2 class="section-title m-0" style="border:0; padding:0;">Additional Analysis</h2>
+                <button class="btn-minimize" onclick="toggleMinimize(this)"><i class="fas fa-minus"></i></button>
+            </div>
+            <div class="accordion accordion-custom" id="detailsAccordion">
+                
+                <!-- Ingredients -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Ingredients Complexity
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+                        <div class="accordion-body">
+                            <strong>Highly complex formulation</strong><br>
+                            Total components: 40<br><br>
+                            <p class="small" style="color: var(--text-muted);">POTATO (84%), EDIBLE VEGETABLE OIL (CONTAINS ONE OR MORE OF THE FOLLOWINGS: PALMOLEIN, GROUNDNUT), **SEASONING [SUGAR, MALTODEXTRIN, SALT, SPICES & CONDIMENTS (CHILLI (0.5%), PEPPER), DEHYDRATED VEGETABLE POWDER (ONION, GARLIC, TOMATO), BLACK SALT, ACIDITY REGULATOR (INS 330, INS 296, INS 334), MILK SOLIDS (0.1%), HYDROLYZED VEGETABLE PROTEIN SOYA), ANTICAKING AGENT (INS 551), FLAVOUR ENHANCER (INS 627, INS 631) FLAVOUR (NATURAL & NATURE IDENTICAL FLAVOURING SUBSTANCES), PAPRIKA EXTRACT (INS 160C), STABILIZER (INS 340), EMULSIFIER (INS 470)]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additives -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Additives (9 Detected)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><strong>E160C</strong>: Color</li><li><strong>E296</strong>: Acidity regulator</li><li><strong>E330</strong>: Acidity regulator</li><li><strong>E334</strong>: Acidity regulator</li><li><strong>E340</strong>: Stabilizer</li><li><strong>E470</strong>: Emulsifier</li><li><strong>E551</strong>: Anti-caking agent</li><li><strong>E627</strong>: Flavour enhancer</li><li><strong>E631</strong>: Flavour enhancer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meta/EcoScore -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Environment & Meta
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+                        <div class="accordion-body">
+                            Nova Group: 4<br>
+                            EcoScore: B<br>
+                            Packaging: en:plastic
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Minimized Tab Bar -->
+    <div id="mini-summary-bar" class="mini-summary-bar">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+                <img id="mini-img" src="" alt="" class="mini-thumb">
+                <div class="mini-info">
+                    <span id="mini-name" class="fw-bold text-white small d-block"></span>
+                    <span id="mini-verdict-text" class="small text-white-50"></span>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="mini-score-pill">
+                    <span class="small text-white">Score:</span>
+                    <strong id="mini-score-val" class="text-white"></strong>
+                </div>
+                <button class="btn btn-warning btn-sm rounded-pill px-3" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <i class="fas fa-arrow-up me-1"></i> Top
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Dynamic Injection Script -->
+    <script>
+        const fullData = {
+          "summary": {
+            "health_score": 33,
+            "verdict": "Limit consumption",
+            "risk_flags": ["High saturated fat", "Ultra-processed food", "High number of additives"],
+            "positives": ["High fiber"],
+            "warnings": ["Contains palm oil", "Contains allergens: soy, nuts, milk / lactose"],
+            "macro_percent_distribution": {
+              "fat_percent_calories": 50.7,
+              "carb_percent_calories": 40.4,
+              "protein_percent_calories": 5.5
+            },
+            "daily_context": [
+              "Saturated fat: 14.4g per 100g (recommended limit ~20g/day)",
+              "Salt: 0.0024175g per 100g (recommended limit ~5g/day)"
+            ],
+            "portion_insight": { "calories_per_pack": 174.4 },
+            "score_breakdown": [
+              { "reason": "High saturated fat", "impact": -10, "value": 14.4, "threshold": "> 5g per 100g" },
+              { "reason": "Ultra-processed (NOVA 4)", "impact": -10, "value": 4, "threshold": "NOVA group 4" },
+              { "reason": "Multiple additives", "impact": -5, "value": 9, "threshold": "> 5 additives" },
+              { "reason": "High fiber", "impact": 8, "value": 9.3, "threshold": "> 5g per 100g" }
+            ],
+            "ingredient_complexity": "Highly complex formulation",
+            "ai_insights": {
+              "explanation": "This product is classified as a highly processed snack. While it provides a significant amount of dietary fiber (9.3g), it is also very high in saturated fats (14.4g) and contains 9 different additives. The combination of high fat and ultra-processing suggests it should be consumed occasionally rather than as a daily staple. The inclusion of palm oil and multiple allergens further lowers its health profile for sensitive individuals.",
+              "suggestion": "Consider swapping these wafers for air-popped popcorn seasoned with herbs, or high-fiber roasted foxnuts (Makhana) for a similar crunch with significantly lower saturated fat levels."
+            }
+          },
+          "details": {
+            "basic_info": {
+              "name": "Balaji Wafers Crunchex",
+              "brand": "Balaji",
+              "image": "https://images.openfoodfacts.net/images/products/890/601/050/1570/front_en.13.400.jpg"
+            },
+            "ingredients": {
+                "ingredients_text": "POTATO (84%), EDIBLE VEGETABLE OIL (CONTAINS ONE OR MORE OF THE FOLLOWINGS: PALMOLEIN, GROUNDNUT), **SEASONING [SUGAR, MALTODEXTRIN, SALT, SPICES & CONDIMENTS (CHILLI (0.5%), PEPPER), DEHYDRATED VEGETABLE POWDER (ONION, GARLIC, TOMATO), BLACK SALT, ACIDITY REGULATOR (INS 330, INS 296, INS 334), MILK SOLIDS (0.1%), HYDROLYZED VEGETABLE PROTEIN SOYA), ANTICAKING AGENT (INS 551), FLAVOUR ENHANCER (INS 627, INS 631) FLAVOUR (NATURAL & NATURE IDENTICAL FLAVOURING SUBSTANCES), PAPRIKA EXTRACT (INS 160C), STABILIZER (INS 340), EMULSIFIER (INS 470)]",
+                "total_count": 40,
+                "additives_count": 9,
+                "decoded_additives": [
+                    { "code": "E160C", "type": "Color" },
+                    { "code": "E296", "type": "Acidity regulator" },
+                    { "code": "E330", "type": "Acidity regulator" },
+                    { "code": "E334", "type": "Acidity regulator" },
+                    { "code": "E340", "type": "Stabilizer" },
+                    { "code": "E470", "type": "Emulsifier" },
+                    { "code": "E551", "type": "Anti-caking agent" },
+                    { "code": "E627", "type": "Flavour enhancer" },
+                    { "code": "E631", "type": "Flavour enhancer" }
+                ]
+            },
+            "meta": {
+                "nova_group": 4,
+                "ecoscore_grade": "b",
+                "packaging_materials": ["en:plastic"]
+            }
+          }
+        };
+
+        let currentUnit = '100g';
+
+        function getTrafficColor(nutrient, value) {
+            // Simple threshold logic for red/amber/green
+            const thresholds = {
+                'fat': { red: 20, amber: 3 },
+                'sat-fat': { red: 5, amber: 1.5 },
+                'sugars': { red: 12.5, amber: 5 },
+                'salt': { red: 1.5, amber: 0.3 }
+            };
+            if (!thresholds[nutrient]) return 'amber'; 
+            if (value > thresholds[nutrient].red) return 'red';
+            if (value > thresholds[nutrient].amber) return 'amber';
+            return 'green';
+        }
+
+        function toggleMinimize(btn) {
+            const card = btn.closest('.glass-card');
+            card.classList.toggle('minimized');
+            const icon = btn.querySelector('i');
+            if (card.classList.contains('minimized')) {
+                icon.className = 'fas fa-plus';
+            } else {
+                icon.className = 'fas fa-minus';
+            }
+        }
+
+        function populatePage(data) {
+            // ... existing basic info ...
+            document.getElementById('mini-name').innerText = data.details.basic_info.name;
+            document.getElementById('mini-verdict-text').innerText = data.summary.verdict;
+            document.getElementById('mini-score-val').innerText = data.summary.health_score;
+            document.getElementById('mini-img').src = data.details.basic_info.image;
+            
+            // ... existing rest of function ...
+            // Basic Info
+            document.getElementById('product-name').innerText = data.details.basic_info.name;
+            document.getElementById('product-brand').innerText = `by ${data.details.basic_info.brand}`;
+            document.getElementById('health-score').innerText = data.summary.health_score;
+            document.getElementById('verdict').innerText = data.summary.verdict;
+            document.getElementById('product-image').src = data.details.basic_info.image;
+
+            // Gauge Animation
+            const score = data.summary.health_score;
+            const circumference = 263.89; // 2 * PI * 42
+            const offset = circumference - (score / 100) * circumference;
+            setTimeout(() => {
+                const progressCircle = document.getElementById('gauge-progress');
+                if (progressCircle) progressCircle.style.strokeDashoffset = offset;
+            }, 300);
+
+            // Badges
+            const nutriGrade = data.details.meta.ecoscore_grade; // Mocking grade
+            const nutriBadge = document.getElementById('nutriscore-badge');
+            nutriBadge.innerText = `Nutri-Score ${nutriGrade.toUpperCase()}`;
+            nutriBadge.className = `badge-v2 nutri-${nutriGrade}`;
+
+            const ecoGrade = data.details.meta.ecoscore_grade;
+            const ecoBadge = document.getElementById('ecoscore-badge');
+            ecoBadge.innerText = `EcoScore ${ecoGrade.toUpperCase()}`;
+            ecoBadge.className = `badge-v2 eco-${ecoGrade}`;
+
+            const novaGroup = data.details.meta.nova_group;
+            const novaBadge = document.getElementById('nova-badge');
+            novaBadge.innerText = `NOVA ${novaGroup}`;
+            novaBadge.className = `badge-v2 nova-${novaGroup}`;
+
+            // Highlights
+            document.getElementById('like-count').innerText = `${data.summary.positives.length} Like${data.summary.positives.length !== 1 ? 's' : ''}`;
+            document.getElementById('concern-count').innerText = `${data.summary.risk_flags.length} Concern${data.summary.risk_flags.length !== 1 ? 's' : ''}`;
+
+            // Traffic Lights
+            updateTrafficLights(data);
+
+            // Per serving visual
+            document.getElementById('serving-size-text').innerText = `1 serving = 30g`;
+
+            // Macros
+            document.getElementById('fat-percent').innerText = data.summary.macro_percent_distribution.fat_percent_calories + '%';
+            document.getElementById('carb-percent').innerText = data.summary.macro_percent_distribution.carb_percent_calories + '%';
+            document.getElementById('protein-percent').innerText = data.summary.macro_percent_distribution.protein_percent_calories + '%';
+            
+            setTimeout(() => {
+                document.getElementById('fat-bar').style.width = data.summary.macro_percent_distribution.fat_percent_calories + '%';
+                document.getElementById('carb-bar').style.width = data.summary.macro_percent_distribution.carb_percent_calories + '%';
+                document.getElementById('protein-bar').style.width = data.summary.macro_percent_distribution.protein_percent_calories + '%';
+            }, 300);
+
+            // Positives & Risks
+            document.getElementById('positives-list').innerHTML = data.summary.positives.map(p => `<span class="badge-custom flag-green">${p}</span>`).join('');
+            document.getElementById('risks-list').innerHTML = data.summary.risk_flags.map(r => `<span class="badge-custom flag-red">${r}</span>`).join('');
+            document.getElementById('warnings-list').innerHTML = data.summary.warnings.map(w => `<p class="mb-1 small">⚠️ ${w}</p>`).join('');
+
+            // Score Table
+            const tableBody = document.getElementById('score-table-body');
+            tableBody.innerHTML = data.summary.score_breakdown.map(item => `
+                <tr>
+                    <td>${item.reason}</td>
+                    <td>${item.value}</td>
+                    <td class="${item.impact < 0 ? 'text-danger' : 'text-success'}" style="font-weight: 700;">${item.impact > 0 ? '+' : ''}${item.impact}</td>
+                </tr>
+            `).join('');
+
+            // Accordion Details
+            // 1. Ingredients
+            document.querySelector('#collapseOne .accordion-body small').innerText = data.details.ingredients.ingredients_text;
+            // 2. Additives
+            document.getElementById('collapseTwo').previousElementSibling.querySelector('button').innerText = `Additives (${data.details.ingredients.additives_count} Detected)`;
+            document.querySelector('#collapseTwo .accordion-body ul').innerHTML = 
+                data.details.ingredients.decoded_additives.map(a => `<li><strong>${a.code}</strong>: ${a.type}</li>`).join('');
+            // 3. Meta
+            document.querySelector('#collapseThree .accordion-body').innerHTML = `
+                Nova Group: ${data.details.meta.nova_group}<br>
+                EcoScore: ${data.details.meta.ecoscore_grade.toUpperCase()}<br>
+                Packaging: ${data.details.meta.packaging_materials.join(', ')}
+            `;
+
+            // AI Insights
+            document.getElementById('ai-explanation').innerText = data.summary.ai_insights.explanation;
+            document.getElementById('ai-suggestion').innerText = data.summary.ai_insights.suggestion;
+        }
+
+        function updateTrafficLights(data) {
+            const mult = currentUnit === 'serv' ? 0.3 : 1; // 30g serving
+            
+            const energy = Math.round(528 * mult);
+            const fat = (32.3 * mult).toFixed(1);
+            const satFat = (14.4 * mult).toFixed(1);
+            const sugars = (3.0 * mult).toFixed(1);
+            const salt = (0.002 * mult).toFixed(3);
+
+            document.getElementById('val-energy').innerText = `${energy} kcal`;
+            document.getElementById('val-fat').innerText = `${fat}g`;
+            document.getElementById('val-sat-fat').innerText = `${satFat}g`;
+            document.getElementById('val-sugars').innerText = `${sugars}g`;
+            document.getElementById('val-salt').innerText = `${salt}g`;
+
+            // Update Colors
+            ['fat', 'sat-fat', 'sugars', 'salt'].forEach(n => {
+                const val = n === 'sat-fat' ? satFat : (n === 'fat' ? fat : (n === 'sugars' ? sugars : salt));
+                const color = getTrafficColor(n, val / mult); // Always judge based on 100g levels
+                const tile = document.getElementById(`val-${n}`).parentElement;
+                tile.querySelector('.rda-fill').className = `rda-fill ${color}`;
+            });
+        }
+
+        document.getElementById('toggle-100g').addEventListener('change', () => { currentUnit = '100g'; updateTrafficLights(fullData); });
+        document.getElementById('toggle-serv').addEventListener('change', () => { currentUnit = 'serv'; updateTrafficLights(fullData); });
+
+        // Scroll Observer for Mini Bar
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('.block-hero');
+            const miniBar = document.getElementById('mini-summary-bar');
+            if (window.scrollY > (hero.offsetHeight - 100)) {
+                miniBar.classList.add('active');
+            } else {
+                miniBar.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            populatePage(fullData);
+        });
+    </script>
+</body>
+</html>

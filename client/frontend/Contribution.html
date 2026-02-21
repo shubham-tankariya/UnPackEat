@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contribution</title>
+    
+    <link rel="stylesheet" href="Contribution_style.css " />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top mt-3">
+            <div class="container">
+                <!-- PILL SHELL (FIXED SHAPE) -->
+                <div class="w-100 px-4 py-2 border rounded-pill shadow-sm" style="background-color: #626f47">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <!-- Brand -->
+                        <a class="navbar-brand fw-bold text-warning text-nowrap m-0" href="#">
+                            UnPackEat
+                        </a>
+
+                        <!-- Desktop menu -->
+                        <ul class="navbar-nav d-none d-lg-flex gap-3 mb-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="awareness.html">Awareness</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="FAQ.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fw-bold text-warning"
+                                    href="Contribution.html">Contribution</a>
+                            </li>
+                        </ul>
+
+                        <!-- Right side -->
+                        <div class="d-flex align-items-center gap-2">
+                            <input class="form-control rounded-pill d-none d-lg-block" type="search"
+                                placeholder="Search" />
+                            <button class="btn btn-outline-warning rounded-pill d-none d-lg-block">
+                                Search
+                            </button>
+                            <a href="user.html" class="d-flex align-items-center text-white text-decoration-none">
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                    class="rounded-circle me-2" />
+                                <strong>User</strong>
+                            </a>
+
+                            <!-- Hamburger -->
+                            <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#mobileMenu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE MENU -->
+                <div class="collapse d-lg-none mt-3 mx-auto" id="mobileMenu" style="max-width: 100%">
+                    <div class="card card-body shadow-sm rounded-4 text-center mx-auto"
+                        style="max-width: 95%; background-color: #626f47">
+                        <ul class="navbar-nav gap-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="awareness.html">Awareness</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="FAQ.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fw-bold text-warning"
+                                    href="Contribution.html">Contribution</a>
+                            </li>
+                        </ul>
+
+                        <hr class="border-light" />
+
+                        <input class="form-control rounded-pill mb-2" type="search" placeholder="Search" />
+                        <button class="btn btn-outline-light rounded-pill w-100">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="py-5 section2-color">
+            <!-- set section background color -->
+            <div class="container px-0">
+                <div class="px-4 py-4">
+
+                    <!-- Section Title -->
+                    <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                        <h2 class="fw-bold">
+
+                            <span class="text-success"></span>
+                        </h2>
+                        <p class="text-muted">
+
+                        </p>
+                    </div>
+
+                    <!-- Steps Block -->
+                    <div class="container">
+
+                        <form id="contributionForm" class="custom-box p-4 shadow-sm">
+
+                            <!-- BASIC INFO -->
+                            <h4 class="mb-3">Basic Information</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="productName" placeholder="Product Name"
+                                        required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="brandName" placeholder="Brand Name"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- INGREDIENTS -->
+                            <h4 class="mb-3 mt-4">Ingredients</h4>
+                            <textarea class="form-control mb-3" id="ingredients" rows="4"
+                                placeholder="Enter ingredients separated by commas"></textarea>
+
+                            <!-- IMAGE -->
+                            <h4 class="mb-3 mt-4">Upload Image</h4>
+                            <input type="file" class="form-control mb-4">
+
+                            <!-- SUBMIT -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success px-5 py-2">
+                                    Submit
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer-color py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-4">
+                <!-- Brand + Copyright -->
+                <!-- Brand + Copyright in one column -->
+                <div class="col mb-3 text-center text-md-start">
+                    <div class="d-flex flex-column align-items-center align-items-md-start">
+                        <span class="fw-bold text-white mb-1">Food Analyser</span>
+                        <span class="text-white">© 2025</span>
+                    </div>
+                </div>
+
+                <div class="col mb-3"></div>
+                <!-- Empty column for spacing -->
+
+                <!-- Section 1 -->
+                <div class="col mb-3">
+                    <h5 class="text-white">Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Features</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="col mb-3">
+                    <h5 class="text-white">Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Features</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="col mb-3">
+                    <h5 class="text-white">Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Features</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="footer-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // Animates only once when scrolling
+            duration: 1500, // Default animation duration
+        });
+    </script>
+</body>
+
+</html>

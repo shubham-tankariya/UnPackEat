@@ -1,0 +1,131 @@
+<nav class="navbar navbar-expand-lg fixed-top mt-2">
+    <div class="container-fluid px-3 px-md-5">
+        <!-- PILL SHELL (FIXED SHAPE) -->
+        <div class="w-100 px-3 py-2 border rounded-pill shadow-sm d-flex align-items-center justify-content-between"
+            style="background-color: #626f47; box-sizing: border-box;">
+
+            <!-- Left: User Icon & Brand -->
+            <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                <% if(currentUser) { %>
+                    <a href="/user_detail"
+                        class="d-lg-none text-white text-decoration-none d-flex align-items-center user-toggle">
+                        <img src="https://github.com/mdo.png" alt="" width="40" height="40"
+                            class="rounded-circle user-avatar border border-warning border-2" />
+                    </a>
+                    <% } else { %>
+                        <a href="/login" class="d-lg-none text-warning d-flex align-items-center"
+                            style="font-size: 2rem;" title="Login / Sign Up">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </a>
+                        <% } %>
+
+                            <a class="navbar-brand fw-bold text-warning text-nowrap m-0 d-none d-sm-block" href="/home">
+                                UnPackEat
+                            </a>
+            </div>
+
+            <!-- Center: Desktop Menu -->
+            <ul class="navbar-nav d-none d-lg-flex gap-3 mb-0 flex-shrink-0 mx-3">
+                <li class="nav-item">
+                    <a class="nav-link <%= (typeof page !== 'undefined' && page === 'home') ? 'active fw-bold text-warning' : 'text-white' %>"
+                        href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= (typeof page !== 'undefined' && page === 'awareness') ? 'active fw-bold text-warning' : 'text-white' %>"
+                        href="/awareness">Awareness</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= (typeof page !== 'undefined' && page === 'faq') ? 'active fw-bold text-warning' : 'text-white' %>"
+                        href="/faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= (typeof page !== 'undefined' && page === 'history') ? 'active fw-bold text-warning' : 'text-white' %>"
+                        href="/history">History</a>
+                </li>
+            </ul>
+
+            <!-- Middle/Right: Flex-Grow Search Bar & Hamburger -->
+            <div class="d-flex align-items-center justify-content-end gap-2 flex-grow-1" style="min-width: 0;">
+
+                <!-- Search Form -->
+                <form action="/analysis" method="get" class="d-flex align-items-center ms-auto w-100"
+                    style="max-width: 200px;">
+                    <div class="input-group flex-nowrap w-100">
+                        <input class="form-control border-end-0 rounded-start-pill px-3" type="search" name="barcode"
+                            placeholder="Search..." required style="height: 40px; min-width: 0; box-shadow: none;" />
+                        <button class="btn btn-warning rounded-end-pill px-3" type="submit"
+                            style="height: 40px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Desktop User Dropdown -->
+                <% if(currentUser) { %>
+                    <div class="dropdown d-none d-lg-block flex-shrink-0">
+                        <a href="#"
+                            class="d-flex align-items-center text-white text-decoration-none dropdown-toggle user-toggle"
+                            data-bs-toggle="dropdown">
+                            <img src="https://github.com/mdo.png" alt="" width="40" height="40"
+                                class="rounded-circle me-2 user-avatar border border-warning border-2" />
+                            <strong>
+                                <%= currentUser.username || 'User' %>
+                            </strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="/user_detail">View Profile</a></li>
+                            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                        </ul>
+                    </div>
+                    <% } else { %>
+                        <a href="/login" class="text-warning ms-2 d-none d-lg-block flex-shrink-0"
+                            style="font-size: 2rem;" title="Login / Sign Up">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </a>
+                        <% } %>
+
+                            <!-- Mobile Hamburger -->
+                            <button class="navbar-toggler d-lg-none border-0 p-0 ms-1 flex-shrink-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                                <span class="navbar-toggler-icon" style="width: 1.5em; height: 1.5em;"></span>
+                            </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div class="collapse d-lg-none mt-3 w-100" id="mobileMenu">
+            <div class="card card-body shadow-lg rounded-4 text-center border-0 w-100"
+                style="background-color: #626f47">
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link <%= (typeof page !== 'undefined' && page === 'home') ? 'active fw-bold text-warning' : 'text-white' %>"
+                            href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= (typeof page !== 'undefined' && page === 'awareness') ? 'active fw-bold text-warning' : 'text-white' %>"
+                            href="/awareness">Awareness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= (typeof page !== 'undefined' && page === 'faq') ? 'active fw-bold text-warning' : 'text-white' %>"
+                            href="/faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= (typeof page !== 'undefined' && page === 'history') ? 'active fw-bold text-warning' : 'text-white' %>"
+                            href="/history">History</a>
+                    </li>
+                </ul>
+
+                <hr class="border-light" />
+
+                <% if(currentUser) { %>
+                    <div class="text-white mb-2 fs-5">Hello, <strong>
+                            <%= currentUser.username || 'User' %>
+                        </strong></div>
+                    <a href="/logout" class="btn btn-outline-light rounded-pill w-100 mb-2">Logout</a>
+                    <% } else { %>
+                        <a href="/login" class="btn btn-outline-light rounded-pill w-100 mb-2">Login / Sign Up</a>
+                        <% } %>
+            </div>
+        </div>
+    </div>
+</nav>

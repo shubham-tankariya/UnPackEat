@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Analyser</title>
+
+    <link rel="stylesheet" href="/css/home_landing.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <%- include('layouts/navbar') %>
+    </header>
+
+    <main>
+
+        <!-- Overlay For Feedback -->
+        <% if(success && success.length> 0) { %>
+            <div class="alert alert-success position-fixed top-0 end-0 m-4 z-3" style="margin-top: 100px !important;">
+                <%= success %>
+            </div>
+            <% } %>
+                <% if(error && error.length> 0) { %>
+                    <div class="alert alert-danger position-fixed top-0 end-0 m-4 z-3"
+                        style="margin-top: 100px !important;">
+                        <%= error %>
+                    </div>
+                    <% } %>
+
+                        <section>
+                            <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <!-- Slide 1 -->
+                                    <div class="carousel-item active">
+                                        <img src="/images/img-6.jpg" class="d-block w-100 img-fluid" alt="Food Analyzer"
+                                            style="object-fit: cover; height: 87vh" />
+
+                                        <!-- Overlay content -->
+                                        <div
+                                            class="carousel-caption top-0 start-0 w-100 h-100 d-flex align-items-center">
+                                            <div class="container">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-12 col-md-10 col-lg-8 text-center text-md-center">
+
+                                                        <h1 class="display-5 display-md-4 fw-bold text-white mb-3"
+                                                            data-aos="fade-down" data-aos-duration="1500">
+                                                            Analyze Food Instantly
+                                                        </h1>
+
+                                                        <p class="lead text-white mb-4" data-aos="fade-up"
+                                                            data-aos-duration="1500" data-aos-delay="200">
+                                                            Scan, analyze, and make healthier choices with Food
+                                                            Analyser.
+                                                        </p>
+
+                                                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3"
+                                                            data-aos="fade-up" data-aos-duration="1500"
+                                                            data-aos-delay="400">
+                                                            <a href="#how_it_work"
+                                                                class="btn btn-success btn-lg rounded-pill px-4 py-2 w-100 w-sm-auto">
+                                                                Get Started
+                                                            </a>
+                                                            <button
+                                                                class="btn btn-warning btn-lg rounded-pill px-4 py-2 w-100 w-sm-auto"
+                                                                data-bs-toggle="modal" data-bs-target="#scannerModal">
+                                                                <i class="fa-solid fa-barcode me-2"></i>Scan Barcode
+                                                            </button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <section id="how_it_work">
+                            <!-- Section Title -->
+                            <div class="text-center mb-4 py-5" data-aos="fade-up" data-aos-duration="1500"
+                                data-aos-delay="200">
+                                <h2 class="fw-bold">
+                                    How Food Analyser Works -
+                                    <span class="text-success">3 easy steps</span>
+                                </h2>
+                                <p class="text-muted">
+                                    Analyse your food quickly and make healthier choices in just
+                                    three simple steps.
+                                </p>
+                            </div>
+                            <!-- STEPS -->
+                            <section class="steps-section">
+                                <!-- SVG CURVED PATH -->
+                                <svg class="progress-line" viewBox="0 0 1000 2700" preserveAspectRatio="none">
+                                    <path id="timelinePath" d="
+        M 500 0
+        C 850 300, 150 600, 500 900
+        C 850 1200, 150 1500, 500 1800
+        C 850 2100, 150 2400, 500 2700
+      " fill="none" stroke="#A4B465" stroke-width="6" />
+                                </svg>
+
+                                <div class="hero-step left mt-5">
+                                    <div class="step-number">01</div>
+                                    <img src="/images/product.png" alt="">
+                                    <p class="hero-content">
+                                        <b>Upload a clear image of your food or scan the
+                                            nutrition label to begin analysing ingredients,
+                                            nutritional values, and overall health impact.
+                                            nutritional values, and overall health impact.</b>
+                                    </p>
+                                </div>
+
+                                <div class="hero-step right">
+                                    <div class="step-number">02</div>
+                                    <img src="/images/product.png" alt="">
+                                    <p class="hero-content">
+                                        <b>Our
+                                            smart food analyser quickly processes the information
+                                            and provides easy-to-understand insights to help you
+                                            make healthier, more informed dietary choices.</b>
+                                    </p>
+                                </div>
+
+                                <div class="hero-step left">
+                                    <div class="step-number">03</div>
+                                    <img src="/images/product.png" alt="">
+                                    <p class="hero-content"><b>User logs in and can add their details as per AI
+                                            analysised
+                                            results.</b>
+                                    </p>
+                                </div>
+
+                                <div class="hero-step right">
+                                    <div class="step-number">04</div>
+                                    <img src="/images/product.png" alt="">
+                                    <p class="hero-content">
+                                        <b>Be aware about food facts and news by going to Awareness
+                                            section.</b>
+                                    </p>
+                                </div>
+                            </section>
+                        </section>
+
+
+                        <section class="py-5 section3-color">
+                            <div class="container px-0">
+                                <!-- remove horizontal padding -->
+                                <div class="px-4">
+                                    <!-- optional inner padding for content -->
+
+                                    <!-- Section Title -->
+                                    <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="1500"
+                                        data-aos-delay="200">
+                                        <h2 class="fw-bold">
+                                            App Features -
+                                            <span class="text-success">Everything You Need in One Place</span>
+                                        </h2>
+                                        <p class="text-muted">
+                                            Explore powerful tools designed to help you analyse food
+                                            instantly, understand ingredients clearly, and make healthier
+                                            decisions with confidence.
+                                        </p>
+                                    </div>
+
+                                    <!-- Features Grid -->
+                                    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                                        <!-- Feature 1 -->
+                                        <div class="col">
+                                            <div class="card h-100 border-0 shadow-sm feature-card d-flex flex-column rounded-5"
+                                                data-aos="fade-right" data-aos-duration="1500"
+                                                style="background-color: #A4B465;">
+                                                <div class="card-body text-center flex-grow-1 text-white">
+                                                    <div
+                                                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-white bg-gradient fs-2 mb-3 rounded-circle p-4">
+                                                        <img src="/images/s1.png" height="40px" width="40px" />
+                                                    </div>
+                                                    <h3 class="fs-4 fw-bold mb-2">
+                                                        Ingredient Analysis & Allergen Detection
+                                                    </h3>
+                                                    <p class="text-white-50">
+                                                        Identify allergens, additives, preservatives, and
+                                                        harmful
+                                                        ingredients. Display risk levels or health ratings.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Feature 2 -->
+                                        <div class="col">
+                                            <div class="card h-100 border-0 shadow-sm feature-card d-flex flex-column rounded-5"
+                                                data-aos="fade-up" data-aos-duration="1500" data-aos-delay="150"
+                                                style="background-color: #A4B465;">
+                                                <div class="card-body text-center flex-grow-1 text-white">
+                                                    <div
+                                                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-white bg-gradient fs-2 mb-3 rounded-circle p-4">
+                                                        <img src="/images/s2.png" height="40px" width="40px" />
+                                                    </div>
+                                                    <h3 class="fs-4 fw-bold mb-2">
+                                                        Personalized Recommendations
+                                                    </h3>
+                                                    <p class="text-white-50">
+                                                        Suggest healthier alternatives for scanned products.
+                                                        Recommend recipes or foods based on diet preferences.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Feature 3 -->
+                                        <div class="col">
+                                            <div class="card h-100 border-0 shadow-sm feature-card d-flex flex-column rounded-5"
+                                                data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300"
+                                                style="background-color: #A4B465;">
+                                                <div class="card-body text-center flex-grow-1 text-white">
+                                                    <div
+                                                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-white bg-gradient fs-2 mb-3 rounded-circle p-4">
+                                                        <img src="/images/s3.png" height="40px" width="40px" />
+                                                    </div>
+                                                    <h3 class="fs-4 fw-bold mb-2">Nutrition Score</h3>
+                                                    <p class="text-white-50">
+                                                        Provide an easy-to-understand health score for each
+                                                        product.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+    </main>
+
+    <%- include('layouts/footer') %>
+
+        <!-- Barcode Scanner Modal -->
+        <div class="modal fade" id="scannerModal" tabindex="-1" aria-labelledby="scannerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content rounded-5 overflow-hidden">
+                    <div class="modal-header bg-success text-white border-0">
+                        <h5 class="modal-title fw-bold" id="scannerModalLabel">Scan Product Barcode</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0 position-relative" style="background: #000; min-height: 400px;">
+                        <div id="interactive" class="viewport"></div>
+                        <div class="scanner-overlay">
+                            <div class="scanner-laser"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center bg-light">
+                        <p class="small text-muted mb-0">Align the barcode within the frame to scan automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                once: true, // Animates only once when scrolling
+                duration: 1500, // Default animation duration
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@ericblade/quagga2@1.8.4/dist/quagga.min.js"></script>
+        <script src="/js/navbar_common.js"></script>
+        <script src="/js/home_landing.js"></script>
+        <script src="/js/scanner.js"></script>
+</body>
+
+</html>

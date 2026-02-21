@@ -1,0 +1,576 @@
+:root {
+    --primary-green: #16C47F;
+    --accent-yellow: #FFD65A;
+    --accent-orange: #FF9D23;
+    --danger-red: #F93827;
+    --bg-light: #f4fff9;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Remove black focus border on hamburger menu */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+* {
+    font-family: "SN Pro", sans-serif;
+}
+
+/* NAVBAR */
+/* Navbar links default */
+.navbar .nav-link {
+    color: #ffffff;
+    /* default white */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar {
+    transition: transform 0.2s ease-in-out;
+}
+
+.navbar-hidden {
+    transform: translateY(-200%);
+}
+
+/* hover effect with underline animation */
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-yellow);
+    /* yellow underline */
+    transition: width 0.4s ease-in-out;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+    /* underline expands */
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent-yellow);
+    /* text turns yellow */
+}
+
+/* Active link */
+.navbar .nav-link.active {
+    color: var(--accent-yellow);
+}
+
+/*Desktop and mobile unified hover background pill */
+.navbar .nav-link:hover,
+#mobileMenu .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 0.4rem 1rem;
+}
+
+.carousel-caption {
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    /* improves text readability */
+}
+
+
+/* Avatar style */
+.user-avatar {
+    border: 2px solid var(--accent-yellow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.user-toggle:hover .user-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 214, 90, 0.6);
+}
+
+a:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+/* Animation keyframes */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dropdown item hover */
+.dropdown-item:hover {
+    background-color: rgba(25, 135, 84, 0.1);
+    font-weight: 500;
+}
+
+
+
+
+
+
+/* Mobile menu links spacing and hover */
+#mobileMenu .nav-link {
+    color: #ffffff;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#mobileMenu .nav-link:hover {
+    color: var(--accent-yellow);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+}
+
+/* Search input focus effect */
+.navbar .form-control:focus {
+    border-color: var(--accent-yellow);
+    box-shadow: 0 0 0 0.2rem rgba(255, 214, 90, 0.25);
+}
+
+/* Hamburger icon hover */
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+/* Optional glow effect */
+.navbar .nav-link:hover {
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.7);
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 991.98px) {
+    #mobileMenu .nav-link {
+        padding: 0.5rem 1rem;
+        display: inline-block;
+    }
+}
+
+
+
+
+/* SECTION-1 */
+@media (max-width: 1200px) {
+    #carouselExample .carousel-item img {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 992px) {
+    #carouselExample .carousel-item img {
+        height: 60vh;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #carouselExample .carousel-item img {
+        height: 50vh;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #carouselExample .carousel-item img {
+        height: 35vh;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section2-color {
+    background-color: var(--bg-light);
+}
+
+.section3-color {
+    background-color: var(--bg-light);
+}
+
+.cards-color {
+    background-color: var(--primary-green);
+}
+
+/*.card:hover {
+    background-color: #A4B465; 
+    transition: background-color 0.3s ease;
+}
+
+.card h4:hover {
+    background: #A4B465;
+    transition: color 0.3s ease;
+} */
+
+
+.navbar .form-control {
+    background-color: #ffffff;
+    border: 2px solid var(--primary-green);
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar .form-control:hover,
+.navbar .form-control:focus {
+    background-color: #fafffc;
+    border-color: var(--accent-yellow);
+    box-shadow: 0 0 5px var(--accent-yellow);
+    outline: none;
+}
+
+/* Fix Search Icon Size */
+.navbar .btn-warning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    border: 2px solid var(--primary-green);
+    border-left: none;
+}
+
+.navbar .btn-warning i {
+    font-size: 0.9rem;
+    /* Smaller icon */
+}
+
+
+.footer-color {
+    background: var(--primary-green);
+}
+
+
+
+
+
+
+
+
+
+.footer-color {
+    background-color: var(--primary-green);
+    /* Full background */
+    color: #ffffff;
+}
+
+/* Footer links default gray */
+.footer-link {
+    color: #b0b0b0;
+    /* gray */
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none !important;
+}
+
+/* Hover effect: white */
+.footer-link:hover {
+    color: #ffffff !important;
+    transform: translateX(2px);
+}
+
+/* Footer headings */
+.footer-color h5 {
+    color: #ffffff;
+}
+
+/* Ensure background color fills padding/margin */
+.footer-color .container,
+.footer-color .row {
+    background-color: inherit;
+}
+
+
+
+
+/* Steps Of the field */
+/* time-line SECTION */
+.steps-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+}
+
+/* SVG LINE */
+.progress-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#timelinePath {
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* STEPS */
+.hero-step {
+    position: relative;
+    width: 40%;
+    margin: 200px 0;
+    z-index: 1;
+
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+
+
+.hero-step.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero-step.left {
+    margin-left: 5%;
+}
+
+.hero-step.right {
+    margin-left: 55%;
+}
+
+/* IMAGE EFFECT */
+.hero-step img {
+    width: 55%;
+    display: block;
+    margin: 0 auto 20px auto;
+    filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.15));
+}
+
+
+.hero-step.active img {
+    transform: rotate(7deg) scale(1.1);
+}
+
+/* TEXT */
+.hero-step h2 {
+    margin: 15px 0 10px;
+    color: var(--primary-green);
+}
+
+.hero-step p {
+    color: #555;
+}
+
+/* NUMBER BLOCK */
+.step-number {
+    position: absolute;
+    top: -40px;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--accent-orange), var(--danger-red));
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Position left side numbers to hit 50% section width */
+.hero-step.left .step-number {
+    left: 112.5%;
+}
+
+/* Position right side numbers to hit 50% section width */
+.hero-step.right .step-number {
+    left: -12.5%;
+}
+
+/* Animation when active */
+.hero-step.active .step-number {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.hero-content {
+    width: 80%;
+    line-height: 1.6;
+}
+
+/* Push text to outer edges to avoid timeline sway */
+.hero-step.left .hero-content {
+    margin-right: auto;
+}
+
+.hero-step.right .hero-content {
+    margin-left: auto;
+}
+
+/* Deleting the previous empty block */
+/* Barcode Scanner Styles */
+#interactive.viewport {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+#interactive.viewport>canvas,
+#interactive.viewport>video {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.scanner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 40%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.scanner-laser {
+    width: 100%;
+    height: 2px;
+    background-color: #ffc107;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 8px #ffc107;
+    animation: laser-scan 2s infinite linear;
+}
+
+@keyframes laser-scan {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+canvas.drawing,
+canvas.drawingBuffer {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Mobile Responsiveness for Steps Timeline */
+@media (max-width: 768px) {
+    .progress-line {
+        display: none;
+        /* Hide SVG wavy line on mobile */
+    }
+
+    .hero-step {
+        width: 90%;
+        margin: 60px auto 40px auto !important;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .hero-step.left,
+    .hero-step.right {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .hero-step img {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin: 15px auto 0 auto !important;
+    }
+
+    /* Center the step number on mobile */
+    .step-number {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: -35px !important;
+    }
+
+    .hero-step.active .step-number {
+        transform: translateX(-50%) scale(1.1) !important;
+    }
+
+    .steps-section {
+        padding: 50px 0;
+    }
+}

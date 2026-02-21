@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ - Food Analyser</title>
+
+    <link rel="stylesheet" href="/css/faq.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <%- include('layouts/navbar') %>
+    </header>
+
+    <main>
+        <% if(success && success.length> 0) { %>
+            <div class="alert alert-success position-fixed top-0 end-0 m-4 z-3" style="margin-top: 100px !important;">
+                <%= success %>
+            </div>
+            <% } %>
+                <% if(error && error.length> 0) { %>
+                    <div class="alert alert-danger position-fixed top-0 end-0 m-4 z-3"
+                        style="margin-top: 100px !important;">
+                        <%= error %>
+                    </div>
+                    <% } %>
+
+                        <section class="py-5 section2-color">
+                            <div class="container px-0">
+                                <div class="px-4 py-4">
+                                    <div class="text-center mb-4 mt-4" data-aos="fade-up" data-aos-duration="1500"
+                                        data-aos-delay="200">
+                                        <h2 class="fw-bold">Frequently Asked <span class="text-success">Questions</span>
+                                        </h2>
+                                        <p class="text-muted">Find answers to common questions about food analysis and
+                                            safety.</p>
+                                    </div>
+
+                                    <div class="container py-5">
+                                        <div class="section_title text-center mb-4">
+                                            <h2 class="fw-bold">Free Features & Basic Usage</h2>
+                                        </div>
+                                        <div class="accordion accordion-flush" id="accordionFeatures">
+                                            <div class="accordion-item mb-3 shadow-sm rounded-3">
+                                                <h2 class="accordion-header" id="featureHeading1">
+                                                    <button class="accordion-button collapsed fw-semibold"
+                                                        data-bs-toggle="collapse" data-bs-target="#featureCollapse1">
+                                                        What is a food ingredient list?
+                                                    </button>
+                                                </h2>
+                                                <div id="featureCollapse1" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFeatures">
+                                                    <div class="accordion-body">A food ingredient list is a detailed
+                                                        list of all ingredients in descending order by weight.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item mb-3 shadow-sm rounded-3">
+                                                <h2 class="accordion-header" id="featureHeading2">
+                                                    <button class="accordion-button collapsed fw-semibold"
+                                                        data-bs-toggle="collapse" data-bs-target="#featureCollapse2">
+                                                        Why is it important?
+                                                    </button>
+                                                </h2>
+                                                <div id="featureCollapse2" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFeatures">
+                                                    <div class="accordion-body">Helps identify allergens, compare
+                                                        products, and ensures transparency.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm rounded-3">
+                                                <h2 class="accordion-header" id="featureHeading3">
+                                                    <button class="accordion-button collapsed fw-semibold"
+                                                        data-bs-toggle="collapse" data-bs-target="#featureCollapse3">
+                                                        How are ingredients listed?
+                                                    </button>
+                                                </h2>
+                                                <div id="featureCollapse3" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionFeatures">
+                                                    <div class="accordion-body">Listed by weight, including additives
+                                                        and sub-ingredients.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container py-5">
+                                        <div class="section_title text-center mb-4">
+                                            <h2 class="fw-bold">Common questions about ingredient labels</h2>
+                                        </div>
+                                        <div class="accordion accordion-flush" id="accordionCommon">
+                                            <div class="accordion-item mb-3 shadow-sm rounded-3">
+                                                <h2 class="accordion-header" id="commonHeading1">
+                                                    <button class="accordion-button collapsed fw-semibold"
+                                                        data-bs-toggle="collapse" data-bs-target="#commonCollapse1">
+                                                        What does “natural flavors” mean?
+                                                    </button>
+                                                </h2>
+                                                <div id="commonCollapse1" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionCommon">
+                                                    <div class="accordion-body">Extracts from plants or animals to
+                                                        enhance taste.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item mb-3 shadow-sm rounded-3">
+                                                <h2 class="accordion-header" id="commonHeading2">
+                                                    <button class="accordion-button collapsed fw-semibold"
+                                                        data-bs-toggle="collapse" data-bs-target="#commonCollapse2">
+                                                        Why are some ingredients hard to understand?
+                                                    </button>
+                                                </h2>
+                                                <div id="commonCollapse2" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionCommon">
+                                                    <div class="accordion-body">Manufacturers often use scientific names
+                                                        for additives.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm rounded-3">
+                                                <h2 class="accordion-header" id="commonHeading3">
+                                                    <button class="accordion-button collapsed fw-semibold"
+                                                        data-bs-toggle="collapse" data-bs-target="#commonCollapse3">
+                                                        How to read an ingredient list effectively?
+                                                    </button>
+                                                </h2>
+                                                <div id="featureCollapse3" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionCommon">
+                                                    <div class="accordion-body">Check allergens, sugar, additives, and
+                                                        ingredient order.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container py-5">
+                                        <div class="section_title text-center mb-4">
+                                            <h2 class="fw-bold">Miscellaneous FAQs</h2>
+                                        </div>
+                                        <div class="accordion accordion-flush" id="accordionMisc">
+                                            <div class="accordion-item mb-3 shadow-sm rounded-3">
+                                                <h2 class="accordion-header" id="miscHeading1">
+                                                    <button class="accordion-button collapsed fw-semibold"
+                                                        data-bs-toggle="collapse" data-bs-target="#miscCollapse1">
+                                                        Can ingredients change?
+                                                    </button>
+                                                </h2>
+                                                <div id="miscCollapse1" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionMisc">
+                                                    <div class="accordion-body">Yes, manufacturers may change recipes.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item mb-3 shadow-sm rounded-3">
+                                                <h2 class="accordion-header" id="miscHeading2">
+                                                    <button class="accordion-button collapsed fw-semibold"
+                                                        data-bs-toggle="collapse" data-bs-target="#miscCollapse2">
+                                                        What is “may contain” vs “contains”?
+                                                    </button>
+                                                </h2>
+                                                <div id="miscCollapse2" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionMisc">
+                                                    <div class="accordion-body">“Contains” means present; “may contain”
+                                                        means possible cross-contact.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item shadow-sm rounded-3">
+                                                <h2 class="accordion-header" id="miscHeading3">
+                                                    <button class="accordion-button collapsed fw-semibold"
+                                                        data-bs-toggle="collapse" data-bs-target="#miscCollapse3">
+                                                        How accurate are ingredient lists?
+                                                    </button>
+                                                </h2>
+                                                <div id="miscCollapse3" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionMisc">
+                                                    <div class="accordion-body">Regulated by law and must be truthful.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+    </main>
+
+    <%- include('layouts/footer') %>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({ once: true, duration: 1500 });
+        </script>
+        <script src="/js/navbar_common.js"></script>
+</body>
+
+</html>
